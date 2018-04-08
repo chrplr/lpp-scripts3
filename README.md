@@ -7,9 +7,9 @@ Before anything, set the ROOT_DIR of the project, for example:
 
     . setroot-neurospin
 
-To perform an analysis, first select a model in `models`, sourcing the `setenv` to generate the appropriate environment variables:
+To perform an analysis, first select a model in `models` to set several environment variables:
 
-    . models/en/chrmodels/en/rms-wordrate-freq-bottomup/setenv
+    . setmodel models/en/chrmodels/en/rms-wordrate-freq-bottomup/
 
 Then, you can execute the analysis step by step, following the stages in the `Makefile`:
 	
