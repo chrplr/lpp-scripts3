@@ -1,0 +1,24 @@
+#! /usr/bin/env python
+# Time-stamp: <2017-06-03 22:38:35 cp983411>
+
+
+from __future__ import print_function
+
+import sys
+img = sys.argv[1]
+
+# import numpy as np
+# np.set_printoptions(precision=2, suppress=True)
+
+import nibabel as nib
+i = nib.load(img)
+h = i.header
+
+print('Data type:', end=" ")
+print(h.get_data_dtype())
+print("Voxel size:", end=" ")
+print(h.get_zooms())
+print("Shape:", end=" ")
+print(h.get_data_shape())
+print("Affine:")
+print(i.affine)

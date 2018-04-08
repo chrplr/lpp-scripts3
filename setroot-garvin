@@ -1,0 +1,4 @@
+export ROOT_DIR=/home/jth99/lpp
+
+export PATH="$ROOT_DIR/scripts-python/bin:$PATH"
+export PYTHONPATH="$ROOT_DIR/scripts-python/bin:$PYTHONPATH"

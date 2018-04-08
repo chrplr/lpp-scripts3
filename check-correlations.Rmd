@@ -1,0 +1,35 @@
+---
+title: "Regressors for Le Petit Prince."
+author: "Christophe Pallier"
+date: "June 12, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+require(car)
+knitr::opts_chunk$set(echo = TRUE)
+a = list()
+for (i in 1:9)
+{
+ a[[i]] = read.csv(paste('dmtx_', i, '.csv', sep=''))
+}
+```
+For each session, we load the design matrix, plot the regressors (Note: All the variables are scaled, and shifted relative to one another for the plotting), and print the pairwise correlations and the variance inflation factors.
+
+```{r}
+par(mar=c(5.1, 4.1, 4.1, 8.1), xpd=TRUE)
+for (i in 1:9)
+{
+  m = a[[i]]
+  matplot(1:nrow(m), scale(m) + matrix(rep(3*(1:ncol(m)), nrow(m)), ncol=ncol(m), byrow=T), type='l', bty='l', main=paste('dmtx_', i, '.csv'), lty=1:(ncol(m)), col=1:ncol(m))
+  legend('topright', inset=c(-0.35, 0), legend=names(m), lty=1:ncol(m), col=1:ncol(m))
+  print('pair-wise correlations: ')
+  print(signif(cor(m), 2))
+  y = rnorm(nrow(m))
+  lmm = lm(y ~ wordrate + rms + f0 + freq + bottomup + mwe, data=m)
+  print('Variance Inflation Factors:')
+  print(vif(lmm))
+}
+  
+```
+

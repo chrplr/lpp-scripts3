@@ -1,0 +1,6 @@
+export ROOT_DIR=/home/cp983411/0_work/Le_Petit_Prince/MRI
+
+export PATH="$PWD:$PATH"
+export PYTHONPATH="$PWD:$PYTHONPATH"
+
+
