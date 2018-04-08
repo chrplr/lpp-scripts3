@@ -13,10 +13,10 @@ To perform an analysis, first select a model in `models` to set several environm
 
 Then, you can execute the analysis step by step, following the stages in the `Makefile`:
 	
-	make regressors    # check outputs/regressors
+	make regressors        # check outputs/regressors
 	make design-matrices   # check outputs/design-matrices
-	make first-level   # check output/
-	make second-level
+	make first-level       # check output/results-indiv
+	make second-level      # check output/results-group
 	make roi-analyses
  
 
