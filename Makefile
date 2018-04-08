@@ -51,6 +51,9 @@ roi-analyses:
 	python lpp-rois.py --data_dir=${FIRSTLEVEL_RESULTS} --output=$(MODEL)-rois.csv
 
 
+check-correlations:
+	python check-design-matrices.py $(DESIGN_MATRICES_DIR)/$(wildcard *.csv)
+
 check-correlations.html: check-correlations.Rmd 
 	#cp -f check-correlations.Rmd $(DESIGN_MATRICES_DIR)
 	Rscript -e "setwd('$(DESIGN_MATRICES_DIR)'); rmarkdown::render('check-correlations.Rmd', output_format='html_document')" 
