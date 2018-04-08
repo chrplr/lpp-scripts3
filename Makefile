@@ -1,6 +1,6 @@
 # 
 # Note: This Makefile is not clever, i.e. it  does not know about dependencies
-# Time-stamp: <2018-04-08 12:45:44 cp983411>
+# Time-stamp: <2018-04-08 14:43:15 cp983411>
 
 SHELL := /bin/bash
 
@@ -24,17 +24,18 @@ export ROI_RESULTS ?= outputs/results-group/$(LINGUA)/$(MODEL)-roi
 
 regressors:
 	mkdir -p $(REGS_DIR)
-	generate-regressors.py --no-overwrite --input-dir $(ONSETS_DIR) --output-dir $(REGS_DIR) $(REGS)
+	python generate-regressors.py --no-overwrite --input-dir $(ONSETS_DIR) --output-dir $(REGS_DIR) $(REGS)
 
 design-matrices:
 	mkdir -p $(DESIGN_MATRICES_DIR); \
-	merge-regressors.py -i $(REGS_DIR) -o $(DESIGN_MATRICES_DIR) $(REGS)
+	python merge-regressors.py -i $(REGS_DIR) -o $(DESIGN_MATRICES_DIR) $(REGS)
 	if [ -f $(MODEL_DIR)/orthonormalize.py ]; then \
 		echo 'Orthogonalizing...'; \
 		python $(MODEL_DIR)/orthonormalize.py \
 			--design_matrices=$(DESIGN_MATRICES_DIR) \
 			--output_dir=$(DESIGN_MATRICES_DIR); \
 	fi
+	for f in $(DESIGN_MATRICES_DIR)/*.csv; do python check-design-matrices.py $$f >$${f%.csv}_diagnostics.txt; done
 
 first-level:
 	mkdir -p $(FIRSTLEVEL_RESULTS); \
@@ -51,15 +52,3 @@ second-level:
 
 roi-analyses:
 	python lpp-rois.py --data_dir=${FIRSTLEVEL_RESULTS} --output=$(MODEL)-rois.csv
-
-
-check-correlations:
-	python check-design-matrices.py $(DESIGN_MATRICES_DIR)/$(wildcard *.csv)
-
-check-correlations.html: check-correlations.Rmd 
-	#cp -f check-correlations.Rmd $(DESIGN_MATRICES_DIR)
-	Rscript -e "setwd('$(DESIGN_MATRICES_DIR)'); rmarkdown::render('check-correlations.Rmd', output_format='html_document')" 
-
-check-correlations.pdf: check-correlations.Rmd
-	#cp -f check-correlations.Rmd $(DESIGN_MATRICES_DIR)
-	Rscript -e "setwd('$(DESIGN_MATRICES_DIR)'); rmarkdown::render('check-correlations.Rmd', output_format='pdf_document')" 

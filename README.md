@@ -32,5 +32,4 @@ To create a new model, you need to:
 
 Requirements:
 
-- Python: pandas, nistats, nibabel, nilearn
-- R: car, rmarkdown (only for make check-design-matrices)
+- Python: pandas, nistats, nibabel, nilearn, statsmodels
