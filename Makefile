@@ -1,6 +1,6 @@
 # 
 # Note: This Makefile is not clever, i.e. it  does not know about dependencies
-# Time-stamp: <2018-04-08 10:11:58 cp983411>
+# Time-stamp: <2018-04-08 12:45:44 cp983411>
 
 SHELL := /bin/bash
 
@@ -27,7 +27,7 @@ regressors:
 	generate-regressors.py --no-overwrite --input-dir $(ONSETS_DIR) --output-dir $(REGS_DIR) $(REGS)
 
 design-matrices:
-	mkdir -p $(DESIGN_MATRICES_DIR)
+	mkdir -p $(DESIGN_MATRICES_DIR); \
 	merge-regressors.py -i $(REGS_DIR) -o $(DESIGN_MATRICES_DIR) $(REGS)
 	if [ -f $(MODEL_DIR)/orthonormalize.py ]; then \
 		echo 'Orthogonalizing...'; \
@@ -37,12 +37,14 @@ design-matrices:
 	fi
 
 first-level:
+	mkdir -p $(FIRSTLEVEL_RESULTS); \
 	python $(MODEL_DIR)/firstlevel.py \
 		--subject_fmri_data=$(SUBJECTS_FMRI_DATA) \
 		--design_matrices=$(DESIGN_MATRICES_DIR) \
 		--output_dir=$(FIRSTLEVEL_RESULTS)
 
 second-level:
+	mkdir -p $(GROUP_RESULTS); \
 	python $(MODEL_DIR)/group.py \
 		--data_dir=${FIRSTLEVEL_RESULTS} \
 		--output_dir=$(GROUP_RESULTS) 
