@@ -106,10 +106,7 @@ if __name__ == '__main__':
     if not op.isdir(op.join(output_dir, 'cache')):
         os.mkdir(op.join(output_dir, 'cache'))
     
-    design_files = sorted(glob.glob(op.join(dmtx_dir, 'dmtx_?.csv')))
-    if len(design_files) != 9:
-        print("dmtx_?.csv files not found in %s" % dmtx_dir)
-        sys.exit(1)
+    design_files = sorted(glob.glob(op.join(dmtx_dir, 'dmtx_?_ortho.csv')))
     dtx_mat0 = [pd.read_csv(df) for df in design_files]
     dtx_mat = [((dtx - dtx.mean()) / dtx.std()) for dtx in dtx_mat0]
     for i, d in enumerate(dtx_mat):

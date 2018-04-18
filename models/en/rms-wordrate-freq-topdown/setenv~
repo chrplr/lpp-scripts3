@@ -1,0 +1,42 @@
+# This must be sourced from the python-script directory,
+# with the relative path of the model as argument
+# 
+# Time-stamp: <2018-04-08 10:04:35 cp983411>
+
+#export ROOT_DIR=/neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/
+echo "ROOT_DIR=$ROOT_DIR"
+
+export LINGUA=en
+echo "LINGUA=$LINGUA"
+
+export MODEL="$(basename $1)"
+export MODEL_DIR="$PWD/$1"
+echo "MODEL_DIR=$MODEL_DIR"
+
+export REGS="rms wordrate freq bottomup"
+echo "REGS=$REGS"
+
+export SEQUENTIAL=TRUE
+unset SEQUENTIAL  # comment to run in subjects in parallel (fast but memory intensive)
+
+
+export SUBJECTS_FMRI_DATA="${ROOT_DIR}/fmri-data/${LINGUA}"
+echo "SUBJECTS_FMRI_DATA=$SUBJECTS_FMRI_DATA"
+
+export ONSETS_DIR="onsets/${LINGUA}"
+echo "ONSETS_DIR=$ONSETS_DIR"
+
+export REGS_DIR="regressorsd/${LINGUA}"
+echo "REGS_DIR=$REGS_DIR"
+
+export DESIGN_MATRICES_DIR=design-matricesd/${LINGUA}/${MODEL}
+echo "DESIGN_MATRICES_DIR=$DESIGN_MATRICES_DIR"
+
+export FIRSTLEVEL_RESULTS=${ROOT_DIR}/results-indiv/${LINGUA}/${MODEL}
+echo "FIRSTLEVEL_RESULTS=$FIRSTLEVEL_RESULTS"
+
+export GROUP_RESULTS=${ROOT_DIR}/results-group/${LINGUA}/${MODEL}
+echo "GROUP_RESULTS=$GROUP_RESULTS"
+
+export ROI_RESULTS=${ROOT_DIR}/results-group/${LINGUA}/${MODEL}-roi
+

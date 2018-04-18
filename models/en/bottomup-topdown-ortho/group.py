@@ -1,11 +1,15 @@
 #! /usr/bin/env python
-# Time-stamp: <2017-07-19 13:46:27 cp983411>
+# Time-stamp: <2018-04-18 14:56:19 cp983411>
 
 import os
 import sys
 import os.path as op
 import glob
 import getopt
+
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
+
 
 import pandas as pd
 import nibabel
@@ -22,7 +26,6 @@ def create_one_sample_t_test(name, maps, output_dir, smoothing_fwhm=8.0):
     model = SecondLevelModel(smoothing_fwhm=smoothing_fwhm)
     design_matrix = pd.DataFrame([1] * len(maps),
                                  columns=['intercept'])
-    print(design_matrix)
     model = model.fit(maps,
                       design_matrix=design_matrix)
     z_map = model.compute_contrast(output_type='z_score')
@@ -60,11 +63,12 @@ if __name__ == '__main__':
 
     assert(data_dir is not None)
     
-    cons = ('bottomupO', 'f0O', 'wordrateO', 'mweO', 'freqO', 'rms')
+    cons = ('topdownO', 'bottomupO', 'f0O', 'wordrateO', 'freqO', 'rms')
+#    cons = os.getenv('REGS').split()
     for con in cons:
         mask = op.join(data_dir, '%s_*effsize.nii.gz' % con)
         maps = glob.glob(mask)
         if maps == []:
-            print("%s : no file with this mask" % mask)
+            print("Warning: %s : no such files" % mask)
         else:
             create_one_sample_t_test(con, maps, output_dir)
