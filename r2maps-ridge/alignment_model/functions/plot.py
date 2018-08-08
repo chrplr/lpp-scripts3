@@ -51,7 +51,7 @@ def mask_inverse(r2_voxels, subject, current_ROI):
 
 	return unmasked_data
 
-def glass_brain(img, subject, ROI_name):
+def glass_brain(img, subject, ROI_name, name):
 	"""
 	Imput : 3D data of r2 score
 	Plot r2 score on a glass brain
@@ -60,7 +60,7 @@ def glass_brain(img, subject, ROI_name):
 	display = plot_glass_brain(img, display_mode='lzry', threshold='auto', colorbar=True, title='Sub_{}'.format(subject))
 	if not os.path.exists(os.path.join(settings.path2Figures, 'results/glass_brain', 'Sub_{}'.format(subject), ROI_name)):
 		os.makedirs(os.path.join(settings.path2Figures, 'results/glass_brain', 'Sub_{}'.format(subject), ROI_name))
-	display.savefig(os.path.join(settings.path2Figures, 'results/glass_brain', 'Sub_{}'.format(subject), ROI_name, 'R_squared_test_{}.png'.format(pref.name)))
+	display.savefig(os.path.join(settings.path2Figures, 'results/glass_brain', 'Sub_{}'.format(subject), ROI_name, 'R_squared_test_{}.png'.format(name)))
 	display.close()
 
 
@@ -92,10 +92,9 @@ def regularization_path(r2_train, r2_test, subject, voxel, block, ROI_name):
 	plt.legend(loc=0)
 
 	# Save the figure
-	if pref.save_figures: 
-		if not os.path.exists(os.path.join(settings.path2Figures, 'crossval_ridge', 'Sub_{}'.format(subject), ROI_name)):
-			os.makedirs(os.path.join(settings.path2Figures, 'crossval_ridge', 'Sub_{}'.format(subject), ROI_name))
-		plt.savefig(os.path.join(settings.path2Figures, 'crossval_ridge', 'Sub_{}'.format(subject), ROI_name, '{0}_voxel_{1}_score'.format(block +1 , voxel)))
+	if not os.path.exists(os.path.join(settings.path2Figures, 'crossval_ridge', 'Sub_{}'.format(subject), ROI_name)):
+		os.makedirs(os.path.join(settings.path2Figures, 'crossval_ridge', 'Sub_{}'.format(subject), ROI_name))
+	plt.savefig(os.path.join(settings.path2Figures, 'crossval_ridge', 'Sub_{}'.format(subject), ROI_name, '{0}_voxel_{1}_score'.format(block +1 , voxel)))
 	plt.close()
 
 
@@ -113,8 +112,6 @@ def plot_pca(ratio):
 		i = i + 1
 	print(i)
 
-
-	if pref.save_figures: 
-		if not os.path.exists(os.path.join(settings.path2Figures, 'pca', 'Sub_{}'.format(subject))):
-			os.makedirs(os.path.join(settings.path2Figures, 'pca', 'Sub_{}'.format(subject)))
-		plt.savefig(os.path.join(settings.path2Figures, 'pca', 'Sub_{}'.format(subject), 'pca.png'))
+	if not os.path.exists(os.path.join(settings.path2Figures, 'pca', 'Sub_{}'.format(subject))):
+		os.makedirs(os.path.join(settings.path2Figures, 'pca', 'Sub_{}'.format(subject)))
+	plt.savefig(os.path.join(settings.path2Figures, 'pca', 'Sub_{}'.format(subject), 'pca.png'))

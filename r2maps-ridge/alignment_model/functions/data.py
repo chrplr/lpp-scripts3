@@ -31,12 +31,13 @@ def generate_design_matrices(std=False):
 	
 	for block in range(params.nb_blocks):
 		filenames = []
-		for feature in range(nb_features):
+		for feature in range(params.nb_features_lstm):
 
 			filenames.append(os.path.join(settings.path2Output, 'regressors/en', 'Block{0}/{1}_TimeFeat_{2}_reg.csv'.format(block + 1, block + 1, feature + 1)))
 
 		design_matrice_block = pd.concat([pd.read_csv(f) for f in filenames], axis =1)
 		design_matrice_block.to_csv(os.path.join(settings.path2Output,'design_matrices/en', 'design_matrice_block{}.csv'.format(block + 1)), index=False)
+
 
 def get_design_matrices():
 	"""
@@ -128,6 +129,10 @@ def split_train_test_data(current_block, block):
 	y_train = np.array(current_block[2])
 	y_test = np.array(current_block[3])
 
+	# Generate group list
+	fmri_nb_scans = [len(X_train[i]) for i in range(len(X_train))]
+	groups = np.repeat(list(range(8)), fmri_nb_scans)
+	
 	# Preprocess data for crossvalidation
 	predictors = np.vstack(X_train)	#(num_scans_8_blocks, num_features)
 	data = np.vstack(y_train)		#(num_scans_8_blocks, num_voxels)
@@ -139,12 +144,6 @@ def split_train_test_data(current_block, block):
 
 	standardized_scale = StandardScaler().fit(X_test)
 	X_test = standardized_scale.transform(X_test)
-
-	# Define groups for voxels
-	groups = []
-	for j in range(params.nb_blocks):
-		if j != block:
-			groups = groups + [j + 1]*params.scans[j]
 
 	return predictors, data, X_test, y_test, groups
 
