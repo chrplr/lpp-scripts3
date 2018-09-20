@@ -9,22 +9,20 @@ from nilearn.plotting import plot_glass_brain
 
 import matplotlib.pyplot as plt
 
-from functions import settings_params_preferences as spp
-settings = spp.settings()
-params = spp.params()
-pref = spp.preferences()
+from functions import settings
+paths = settings.paths()
 
 
-def mask_inverse(r2_voxels, subject, current_ROI):
+def glass_brain(r2_voxels, subject, current_ROI, ROI_name, name):
 	"""
 	Input : Masked results of r2score
 	Take masked data and project it again in a 3D space
-	Ouput : 3D data of r2score 
+	Ouput : 3D glassbrain of r2score 
 	"""
 
 	# Get one mask and fit it to the corresponding ROI
 	if current_ROI != -1 and current_ROI <= 5:
-		masks_ROIs_filenames = sorted(glob.glob(os.path.join(settings.path2Data, 
+		masks_ROIs_filenames = sorted(glob.glob(os.path.join(paths.path2Data, 
 												"en/ROIs_masks/",
 												"*.nii")))
 		ROI_mask = masks_ROIs_filenames[current_ROI]
@@ -35,7 +33,7 @@ def mask_inverse(r2_voxels, subject, current_ROI):
 	# Get masks and fit a global mask
 	else:
 		masks = []
-		masks_filenames = sorted(glob.glob(os.path.join(settings.path2Data, 
+		masks_filenames = sorted(glob.glob(os.path.join(paths.path2Data, 
 													"en/fmri_data/masks",
 													"sub_{}".format(subject),  
 													"resample*.pkl")))
@@ -49,31 +47,25 @@ def mask_inverse(r2_voxels, subject, current_ROI):
 		masker.fit()
 		unmasked_data = masker.inverse_transform(r2_voxels)
 
-	return unmasked_data
-
-def glass_brain(img, subject, ROI_name, name):
-	"""
-	Imput : 3D data of r2 score
-	Plot r2 score on a glass brain
-	Output : Figure
-	"""
-	display = plot_glass_brain(img, display_mode='lzry', threshold='auto', colorbar=True, title='Sub_{}'.format(subject))
-	if not os.path.exists(os.path.join(settings.path2Figures, 'glass_brain', 'Sub_{}'.format(subject), ROI_name)):
-		os.makedirs(os.path.join(settings.path2Figures, 'glass_brain', 'Sub_{}'.format(subject), ROI_name))
-	display.savefig(os.path.join(settings.path2Figures, 'glass_brain', 'Sub_{}'.format(subject), ROI_name, 'R_squared_test_{}.png'.format(name)))
-	print('Figure Path : ', os.path.join(settings.path2Figures, 'glass_brain', 'Sub_{}'.format(subject), ROI_name, 'R_squared_test_{}.png'.format(name)))
+	display = plot_glass_brain(unmasked_data, display_mode='lzry', threshold='auto', colorbar=True, title='Sub_{}'.format(subject))
+	if not os.path.exists(os.path.join(paths.path2Figures, 'glass_brain', 'Sub_{}'.format(subject), ROI_name)):
+		os.makedirs(os.path.join(paths.path2Figures, 'glass_brain', 'Sub_{}'.format(subject), ROI_name))
+	
+	display.savefig(os.path.join(paths.path2Figures, 'glass_brain', 'Sub_{}'.format(subject), ROI_name, 'R_squared_test_{}.png'.format(name)))
+	print('Figure Path : ', os.path.join(paths.path2Figures, 'glass_brain', 'Sub_{}'.format(subject), ROI_name, 'R_squared_test_{}.png'.format(name)))
 	display.close()
 
 
-def regularization_path(r2_train_average, r2_val_average, subject, block, ROI_name):
+def regularization_path(r2_train_average, r2_val_average, subject, block, ROI_name, name):
 	"""
 	Input : Output of the training
 	Plot figures of R-squared error of the tran and validation test depending on alpha 
 	Output : Figures
 	"""
+	alphas = np.logspace(alphas[0], alphas[1], alphas[2])
 
-	if not os.path.exists(os.path.join(settings.path2Figures, 'regularization_path', 'Sub_{}'.format(subject), ROI_name)):
-		os.makedirs(os.path.join(settings.path2Figures, 'regularization_path', 'Sub_{}'.format(subject), ROI_name))
+	if not os.path.exists(os.path.join(paths.path2Figures, 'regularization_path', 'Sub_{}'.format(subject), ROI_name, name)):
+		os.makedirs(os.path.join(paths.path2Figures, 'regularization_path', 'Sub_{}'.format(subject), ROI_name, name))
 	
 	for voxel in range(r2_train_average.shape[1]):
 		r2_train = r2_train_average[:, voxel]
@@ -90,21 +82,21 @@ def regularization_path(r2_train_average, r2_val_average, subject, block, ROI_na
 		# Set parameters for figure 2 : R-squared validation data depending of alpha
 		ax2 = ax1.twinx()
 		scores = r2_val
-		ax2.plot(pref.alphas_nested_ridgecv, scores, 'r.', label='R-squared test set')
+		ax2.plot(alphas, scores, 'r.', label='R-squared test set')
 		ax2.set_ylabel('R-squared validation', color='r', size=18)
 		ax2.set_ylim(-1,1)
 		ax2.tick_params('y', colors='r')
 		scores_train = r2_train
-		ax2.plot(pref.alphas_nested_ridgecv, scores_train, 'g.', label='R-squared training set')
+		ax2.plot(alphas, scores_train, 'g.', label='R-squared training set')
 		plt.axis('tight')
 		plt.legend(loc=0)
 
 		# Save the figure
-		plt.savefig(os.path.join(settings.path2Figures, 'regularization_path', 'Sub_{}'.format(subject), ROI_name, '{0}_voxel_{1}_score'.format(block +1 , voxel +1)))
+		plt.savefig(os.path.join(paths.path2Figures, 'regularization_path', 'Sub_{}'.format(subject), ROI_name, name, '{0}_voxel_{1}_score'.format(block +1 , voxel +1)))
 		plt.close()
 
 
-def plot_pca(nb_features, ratio, subject, ROI_name, threshold=0.8):
+def plot_pca(nb_features, ratio, subject, ROI_name, threshold=0.75):
 	x, y = list(range(nb_features)), ratio
 	plt.plot(x, y)
 	i, sum_ = 0, 0
@@ -112,7 +104,7 @@ def plot_pca(nb_features, ratio, subject, ROI_name, threshold=0.8):
 		sum_ = sum_ + y[i]
 		i = i + 1
 	plt.plot([i, i], [0, 0.1], 'r--', lw=2)
-
-	if not os.path.exists(os.path.join(settings.path2Figures, 'PCA', 'Sub_{}'.format(subject))):
-		os.makedirs(os.path.join(settings.path2Figures, 'PCA', 'Sub_{}'.format(subject)))
-	plt.savefig(os.path.join(settings.path2Figures, 'PCA', 'Sub_{}'.format(subject), '{}_pca.png'.format(ROI_name)))
+	print("Number of PCA components to reach threshold : ", i)
+	if not os.path.exists(os.path.join(paths.path2Figures, 'PCA', 'Sub_{}'.format(subject))):
+		os.makedirs(os.path.join(paths.path2Figures, 'PCA', 'Sub_{}'.format(subject)))
+	plt.savefig(os.path.join(paths.path2Figures, 'PCA', 'Sub_{}'.format(subject), '{}_pca.png'.format(ROI_name)))

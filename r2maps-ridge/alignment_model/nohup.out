@@ -1,0 +1,424 @@
+Subject :  57 | ROI :  All  | File :  shuffle_basic_features  | Hash :  641cf411e2c4db83457bba1b6870f14b1faeb492
+Generating data ...
+Loading data ...
+Traceback (most recent call last):
+  File "main.py", line 65, in <module>
+    data = dt.get_data(args.subject, args.ROI, name_ROI, hash_)
+  File "/neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/r2maps-ridge/alignment_model/functions/data.py", line 168, in get_data
+    loaded_data = pickle.load(f)
+KeyboardInterrupt
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:20<02:47, 20.91s/block] 22%|██▏       | 2/9 [00:43<02:31, 21.61s/block]  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:01<00:09,  1.17s/block] 22%|██▏       | 2/9 [00:02<00:08,  1.16s/block] 33%|███▎      | 3/9 [00:03<00:06,  1.15s/block] 44%|████▍     | 4/9 [00:04<00:05,  1.15s/block] 56%|█████▌    | 5/9 [00:05<00:04,  1.16s/block] 67%|██████▋   | 6/9 [00:06<00:03,  1.16s/block] 78%|███████▊  | 7/9 [00:08<00:02,  1.16s/block] 89%|████████▉ | 8/9 [00:09<00:01,  1.16s/block]100%|██████████| 9/9 [00:10<00:00,  1.16s/block]
+  0%|          | 0/9 [00:00<?, ?it/s]/volatile/anaconda3/lib/python3.6/site-packages/nilearn/signal.py:59: RuntimeWarning: invalid value encountered in sqrt
+  std = np.sqrt((signals ** 2).sum(axis=0))
+ 11%|█         | 1/9 [00:05<00:44,  5.61s/it] 22%|██▏       | 2/9 [00:11<00:39,  5.60s/it] 33%|███▎      | 3/9 [00:17<00:35,  5.98s/it] 44%|████▍     | 4/9 [00:23<00:29,  5.97s/it] 56%|█████▌    | 5/9 [00:29<00:23,  5.80s/it] 67%|██████▋   | 6/9 [00:35<00:17,  5.91s/it] 78%|███████▊  | 7/9 [00:41<00:11,  5.92s/it] 89%|████████▉ | 8/9 [00:46<00:05,  5.86s/it]100%|██████████| 9/9 [00:53<00:00,  5.99s/it]
+  0%|          | 0/9 [00:00<?, ?block/s]usage: main.py [-h] [--subject SUBJECT] [--ROI ROI] [--nested] [--plot_nested]
+               [--file FILE] [--pca PCA [PCA ...]]
+               [--n_components N_COMPONENTS]
+               [--features_out FEATURES_OUT [FEATURES_OUT ...]]
+               [--alphas ALPHAS ALPHAS ALPHAS] [--default_alpha DEFAULT_ALPHA]
+               [--shuffle SHUFFLE] [--p_value P_VALUE]
+main.py: error: unrecognized arguments: --cuda --epochs 60 --data ./data/wikitext-2 --nlayers 2 --dropout 0.2 --nhid 300 --emsize 300 --tied --lr 0.5 --model LSTM
+ 11%|█         | 1/9 [00:37<05:02, 37.78s/block] 22%|██▏       | 2/9 [01:09<04:04, 34.94s/block] 33%|███▎      | 3/9 [01:42<03:25, 34.22s/block] 44%|████▍     | 4/9 [02:12<02:45, 33.18s/block] 56%|█████▌    | 5/9 [02:44<02:11, 32.97s/block] 67%|██████▋   | 6/9 [03:14<01:37, 32.50s/block] 78%|███████▊  | 7/9 [03:43<01:03, 31.89s/block] 89%|████████▉ | 8/9 [04:14<00:31, 31.76s/block]100%|██████████| 9/9 [04:45<00:00, 31.73s/block]
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:30<04:02, 30.25s/block] 22%|██▏       | 2/9 [01:01<03:34, 30.57s/block] 33%|███▎      | 3/9 [01:31<03:02, 30.37s/block] 44%|████▍     | 4/9 [02:00<02:30, 30.12s/block] 56%|█████▌    | 5/9 [02:29<01:59, 29.81s/block] 67%|██████▋   | 6/9 [03:00<01:30, 30.08s/block] 78%|███████▊  | 7/9 [03:32<01:00, 30.33s/block] 89%|████████▉ | 8/9 [04:00<00:30, 30.07s/block]100%|██████████| 9/9 [04:30<00:00, 30.07s/block]
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:29<03:55, 29.40s/block] 22%|██▏       | 2/9 [00:57<03:21, 28.73s/block] 33%|███▎      | 3/9 [01:30<03:00, 30.00s/block] 44%|████▍     | 4/9 [02:00<02:31, 30.21s/block] 56%|█████▌    | 5/9 [02:31<02:00, 30.21s/block] 67%|██████▋   | 6/9 [02:58<01:29, 29.78s/block] 78%|███████▊  | 7/9 [03:30<01:00, 30.07s/block] 89%|████████▉ | 8/9 [04:02<00:30, 30.37s/block]100%|██████████| 9/9 [04:35<00:00, 30.57s/block]
+/volatile/anaconda3/lib/python3.6/site-packages/nilearn/plotting/displays.py:684: UserWarning: empty mask
+  get_mask_bounds(new_img_like(img, not_mask, affine))
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:32<04:22, 32.84s/block] 22%|██▏       | 2/9 [01:05<03:48, 32.67s/block] 33%|███▎      | 3/9 [01:33<03:07, 31.27s/block] 44%|████▍     | 4/9 [02:03<02:34, 30.83s/block] 56%|█████▌    | 5/9 [02:33<02:02, 30.68s/block] 67%|██████▋   | 6/9 [03:03<01:31, 30.60s/block] 78%|███████▊  | 7/9 [03:31<01:00, 30.23s/block] 89%|████████▉ | 8/9 [04:02<00:30, 30.29s/block]100%|██████████| 9/9 [04:33<00:00, 30.36s/block]
+/volatile/anaconda3/lib/python3.6/site-packages/nilearn/plotting/displays.py:684: UserWarning: empty mask
+  get_mask_bounds(new_img_like(img, not_mask, affine))
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:30<04:02, 30.34s/block] 22%|██▏       | 2/9 [01:04<03:44, 32.07s/block] 33%|███▎      | 3/9 [01:35<03:10, 31.82s/block] 44%|████▍     | 4/9 [02:02<02:33, 30.73s/block] 56%|█████▌    | 5/9 [02:31<02:01, 30.35s/block] 67%|██████▋   | 6/9 [02:59<01:29, 29.86s/block] 78%|███████▊  | 7/9 [03:27<00:59, 29.67s/block] 89%|████████▉ | 8/9 [03:59<00:29, 29.92s/block]100%|██████████| 9/9 [04:29<00:00, 29.96s/block]
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:32<04:19, 32.42s/block] 22%|██▏       | 2/9 [01:06<03:51, 33.09s/block] 33%|███▎      | 3/9 [01:39<03:18, 33.08s/block] 44%|████▍     | 4/9 [02:10<02:42, 32.53s/block] 56%|█████▌    | 5/9 [02:40<02:08, 32.09s/block] 67%|██████▋   | 6/9 [03:12<01:36, 32.15s/block] 78%|███████▊  | 7/9 [03:46<01:04, 32.39s/block] 89%|████████▉ | 8/9 [04:19<00:32, 32.44s/block]100%|██████████| 9/9 [04:49<00:00, 32.16s/block]
+/volatile/anaconda3/lib/python3.6/site-packages/nilearn/plotting/displays.py:684: UserWarning: empty mask
+  get_mask_bounds(new_img_like(img, not_mask, affine))
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:30<04:05, 30.74s/block] 22%|██▏       | 2/9 [01:01<03:36, 30.94s/block] 33%|███▎      | 3/9 [01:32<03:04, 30.69s/block] 44%|████▍     | 4/9 [02:00<02:30, 30.10s/block] 56%|█████▌    | 5/9 [02:31<02:01, 30.38s/block] 67%|██████▋   | 6/9 [03:00<01:30, 30.14s/block] 78%|███████▊  | 7/9 [03:33<01:00, 30.45s/block] 89%|████████▉ | 8/9 [04:04<00:30, 30.54s/block]100%|██████████| 9/9 [04:35<00:00, 30.56s/block]
+/volatile/anaconda3/lib/python3.6/site-packages/nilearn/plotting/displays.py:684: UserWarning: empty mask
+  get_mask_bounds(new_img_like(img, not_mask, affine))
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:31<04:14, 31.77s/block] 22%|██▏       | 2/9 [01:02<03:37, 31.14s/block] 33%|███▎      | 3/9 [01:31<03:03, 30.61s/block] 44%|████▍     | 4/9 [02:02<02:33, 30.67s/block] 56%|█████▌    | 5/9 [02:35<02:04, 31.05s/block] 67%|██████▋   | 6/9 [03:06<01:33, 31.08s/block] 78%|███████▊  | 7/9 [03:36<01:01, 30.93s/block] 89%|████████▉ | 8/9 [04:03<00:30, 30.44s/block]100%|██████████| 9/9 [04:36<00:00, 30.76s/block]
+/volatile/anaconda3/lib/python3.6/site-packages/nilearn/plotting/displays.py:684: UserWarning: empty mask
+  get_mask_bounds(new_img_like(img, not_mask, affine))
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:31<04:12, 31.62s/block] 22%|██▏       | 2/9 [01:02<03:37, 31.09s/block] 33%|███▎      | 3/9 [01:31<03:03, 30.57s/block] 44%|████▍     | 4/9 [01:58<02:28, 29.70s/block] 56%|█████▌    | 5/9 [02:29<01:59, 29.98s/block] 67%|██████▋   | 6/9 [02:58<01:29, 29.73s/block] 78%|███████▊  | 7/9 [03:25<00:58, 29.31s/block] 89%|████████▉ | 8/9 [03:51<00:28, 28.96s/block]100%|██████████| 9/9 [04:23<00:00, 29.23s/block]
+/volatile/anaconda3/lib/python3.6/site-packages/nilearn/plotting/displays.py:684: UserWarning: empty mask
+  get_mask_bounds(new_img_like(img, not_mask, affine))
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:30<04:01, 30.14s/block] 22%|██▏       | 2/9 [01:02<03:37, 31.09s/block] 33%|███▎      | 3/9 [01:38<03:16, 32.68s/block] 44%|████▍     | 4/9 [02:06<02:38, 31.64s/block] 56%|█████▌    | 5/9 [02:38<02:06, 31.66s/block] 67%|██████▋   | 6/9 [03:11<01:35, 31.89s/block] 78%|███████▊  | 7/9 [03:37<01:02, 31.13s/block] 89%|████████▉ | 8/9 [04:08<00:31, 31.09s/block]100%|██████████| 9/9 [04:36<00:00, 30.77s/block]
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:28<03:46, 28.28s/block] 22%|██▏       | 2/9 [00:58<03:25, 29.35s/block] 33%|███▎      | 3/9 [01:30<03:00, 30.17s/block] 44%|████▍     | 4/9 [01:57<02:27, 29.41s/block] 56%|█████▌    | 5/9 [02:31<02:01, 30.32s/block] 67%|██████▋   | 6/9 [03:01<01:30, 30.28s/block] 78%|███████▊  | 7/9 [03:35<01:01, 30.72s/block] 89%|████████▉ | 8/9 [04:06<00:30, 30.85s/block]100%|██████████| 9/9 [04:41<00:00, 31.25s/block]
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:27<03:40, 27.55s/block] 22%|██▏       | 2/9 [00:56<03:18, 28.38s/block] 33%|███▎      | 3/9 [01:29<02:59, 29.86s/block] 44%|████▍     | 4/9 [02:02<02:32, 30.60s/block] 56%|█████▌    | 5/9 [02:34<02:03, 30.93s/block] 67%|██████▋   | 6/9 [03:07<01:33, 31.18s/block] 78%|███████▊  | 7/9 [03:38<01:02, 31.19s/block] 89%|████████▉ | 8/9 [04:09<00:31, 31.14s/block]100%|██████████| 9/9 [04:40<00:00, 31.16s/block]
+/volatile/anaconda3/lib/python3.6/site-packages/nilearn/plotting/displays.py:684: UserWarning: empty mask
+  get_mask_bounds(new_img_like(img, not_mask, affine))
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:32<04:18, 32.37s/block] 22%|██▏       | 2/9 [01:03<03:41, 31.60s/block] 33%|███▎      | 3/9 [01:33<03:07, 31.17s/block] 44%|████▍     | 4/9 [02:03<02:34, 30.96s/block] 56%|█████▌    | 5/9 [02:34<02:03, 30.97s/block] 67%|██████▋   | 6/9 [03:04<01:32, 30.82s/block] 78%|███████▊  | 7/9 [03:35<01:01, 30.76s/block] 89%|████████▉ | 8/9 [04:05<00:30, 30.68s/block]100%|██████████| 9/9 [04:37<00:00, 30.80s/block]
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:35<04:42, 35.37s/block] 22%|██▏       | 2/9 [01:06<03:52, 33.21s/block] 33%|███▎      | 3/9 [01:38<03:16, 32.74s/block] 44%|████▍     | 4/9 [02:10<02:43, 32.72s/block] 56%|█████▌    | 5/9 [02:43<02:10, 32.65s/block] 67%|██████▋   | 6/9 [03:13<01:36, 32.21s/block] 78%|███████▊  | 7/9 [03:45<01:04, 32.21s/block] 89%|████████▉ | 8/9 [04:15<00:31, 31.94s/block]100%|██████████| 9/9 [04:46<00:00, 31.82s/block]
+/volatile/anaconda3/lib/python3.6/site-packages/nilearn/plotting/displays.py:684: UserWarning: empty mask
+  get_mask_bounds(new_img_like(img, not_mask, affine))
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:32<04:17, 32.20s/block] 22%|██▏       | 2/9 [01:03<03:42, 31.77s/block] 33%|███▎      | 3/9 [01:35<03:10, 31.68s/block] 44%|████▍     | 4/9 [02:07<02:39, 31.80s/block] 56%|█████▌    | 5/9 [02:37<02:05, 31.46s/block] 67%|██████▋   | 6/9 [03:09<01:34, 31.57s/block] 78%|███████▊  | 7/9 [03:41<01:03, 31.57s/block] 89%|████████▉ | 8/9 [04:14<00:31, 31.79s/block]100%|██████████| 9/9 [04:47<00:00, 31.98s/block]
+/volatile/anaconda3/lib/python3.6/site-packages/nilearn/plotting/displays.py:684: UserWarning: empty mask
+  get_mask_bounds(new_img_like(img, not_mask, affine))
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:35<04:46, 35.77s/block] 22%|██▏       | 2/9 [01:08<03:58, 34.11s/block] 33%|███▎      | 3/9 [01:40<03:21, 33.51s/block] 44%|████▍     | 4/9 [02:13<02:47, 33.41s/block] 56%|█████▌    | 5/9 [02:45<02:12, 33.08s/block] 67%|██████▋   | 6/9 [03:20<01:40, 33.38s/block] 78%|███████▊  | 7/9 [03:52<01:06, 33.19s/block] 89%|████████▉ | 8/9 [04:25<00:33, 33.20s/block]100%|██████████| 9/9 [04:57<00:00, 33.02s/block]
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:29<03:56, 29.60s/block] 22%|██▏       | 2/9 [01:00<03:33, 30.44s/block] 33%|███▎      | 3/9 [01:31<03:03, 30.66s/block] 44%|████▍     | 4/9 [02:05<02:36, 31.31s/block] 56%|█████▌    | 5/9 [02:38<02:06, 31.69s/block] 67%|██████▋   | 6/9 [03:11<01:35, 31.90s/block] 78%|███████▊  | 7/9 [03:42<01:03, 31.83s/block] 89%|████████▉ | 8/9 [04:15<00:31, 31.96s/block]100%|██████████| 9/9 [04:48<00:00, 32.07s/block]
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:35<04:47, 35.94s/block] 22%|██▏       | 2/9 [01:07<03:55, 33.60s/block] 33%|███▎      | 3/9 [01:40<03:20, 33.36s/block] 44%|████▍     | 4/9 [02:12<02:45, 33.18s/block] 56%|█████▌    | 5/9 [02:45<02:12, 33.07s/block] 67%|██████▋   | 6/9 [03:18<01:39, 33.06s/block] 78%|███████▊  | 7/9 [03:50<01:05, 32.90s/block] 89%|████████▉ | 8/9 [04:26<00:33, 33.26s/block]100%|██████████| 9/9 [04:57<00:00, 33.09s/block]
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:34<04:32, 34.12s/block] 22%|██▏       | 2/9 [01:08<03:59, 34.24s/block] 33%|███▎      | 3/9 [01:43<03:27, 34.60s/block] 44%|████▍     | 4/9 [02:16<02:50, 34.04s/block] 56%|█████▌    | 5/9 [02:49<02:15, 33.94s/block] 67%|██████▋   | 6/9 [03:21<01:40, 33.54s/block] 78%|███████▊  | 7/9 [03:55<01:07, 33.65s/block] 89%|████████▉ | 8/9 [04:26<00:33, 33.37s/block]100%|██████████| 9/9 [04:56<00:00, 32.94s/block]
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:31<04:08, 31.05s/block] 22%|██▏       | 2/9 [01:04<03:47, 32.44s/block] 33%|███▎      | 3/9 [01:36<03:12, 32.04s/block] 44%|████▍     | 4/9 [02:06<02:38, 31.60s/block] 56%|█████▌    | 5/9 [02:38<02:07, 31.76s/block] 67%|██████▋   | 6/9 [03:12<01:36, 32.12s/block] 78%|███████▊  | 7/9 [03:43<01:03, 31.96s/block] 89%|████████▉ | 8/9 [04:14<00:31, 31.75s/block]100%|██████████| 9/9 [04:45<00:00, 31.75s/block]
+/volatile/anaconda3/lib/python3.6/site-packages/nilearn/plotting/displays.py:684: UserWarning: empty mask
+  get_mask_bounds(new_img_like(img, not_mask, affine))
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:34<04:37, 34.65s/block] 22%|██▏       | 2/9 [01:05<03:49, 32.77s/block] 33%|███▎      | 3/9 [01:36<03:13, 32.32s/block] 44%|████▍     | 4/9 [02:09<02:41, 32.32s/block] 56%|█████▌    | 5/9 [02:41<02:09, 32.30s/block] 67%|██████▋   | 6/9 [03:17<01:38, 32.92s/block] 78%|███████▊  | 7/9 [03:49<01:05, 32.76s/block] 89%|████████▉ | 8/9 [04:23<00:32, 32.94s/block]100%|██████████| 9/9 [04:54<00:00, 32.75s/block]
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:34<04:39, 34.89s/block] 22%|██▏       | 2/9 [01:07<03:55, 33.60s/block] 33%|███▎      | 3/9 [01:42<03:25, 34.26s/block] 44%|████▍     | 4/9 [02:15<02:49, 33.82s/block] 56%|█████▌    | 5/9 [02:47<02:14, 33.55s/block] 67%|██████▋   | 6/9 [03:19<01:39, 33.29s/block] 78%|███████▊  | 7/9 [03:51<01:06, 33.06s/block] 89%|████████▉ | 8/9 [04:26<00:33, 33.29s/block]100%|██████████| 9/9 [04:59<00:00, 33.25s/block]
+/volatile/anaconda3/lib/python3.6/site-packages/nilearn/plotting/displays.py:684: UserWarning: empty mask
+  get_mask_bounds(new_img_like(img, not_mask, affine))
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:30<04:06, 30.84s/block] 22%|██▏       | 2/9 [00:58<03:25, 29.29s/block] 33%|███▎      | 3/9 [01:31<03:02, 30.34s/block] 44%|████▍     | 4/9 [02:03<02:34, 31.00s/block] 56%|█████▌    | 5/9 [02:34<02:03, 30.96s/block] 67%|██████▋   | 6/9 [03:06<01:33, 31.07s/block] 78%|███████▊  | 7/9 [03:38<01:02, 31.22s/block] 89%|████████▉ | 8/9 [04:09<00:31, 31.13s/block]100%|██████████| 9/9 [04:42<00:00, 31.38s/block]
+/volatile/anaconda3/lib/python3.6/site-packages/nilearn/plotting/displays.py:684: UserWarning: empty mask
+  get_mask_bounds(new_img_like(img, not_mask, affine))
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:31<04:10, 31.30s/block] 22%|██▏       | 2/9 [01:02<03:39, 31.34s/block] 33%|███▎      | 3/9 [01:36<03:13, 32.31s/block] 44%|████▍     | 4/9 [02:09<02:41, 32.32s/block] 56%|█████▌    | 5/9 [02:42<02:09, 32.46s/block] 67%|██████▋   | 6/9 [03:14<01:37, 32.44s/block] 78%|███████▊  | 7/9 [03:48<01:05, 32.65s/block] 89%|████████▉ | 8/9 [04:18<00:32, 32.37s/block]100%|██████████| 9/9 [04:50<00:00, 32.33s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:31<04:10, 31.27s/block] 22%|██▏       | 2/9 [01:03<03:42, 31.79s/block] 33%|███▎      | 3/9 [01:34<03:09, 31.64s/block] 44%|████▍     | 4/9 [02:09<02:42, 32.40s/block] 56%|█████▌    | 5/9 [02:46<02:12, 33.23s/block] 67%|██████▋   | 6/9 [03:19<01:39, 33.21s/block] 78%|███████▊  | 7/9 [03:50<01:05, 32.93s/block] 89%|████████▉ | 8/9 [04:22<00:32, 32.84s/block]100%|██████████| 9/9 [04:52<00:00, 32.51s/block]
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:29<03:52, 29.04s/block] 22%|██▏       | 2/9 [01:00<03:30, 30.01s/block] 33%|███▎      | 3/9 [01:29<02:59, 29.88s/block] 44%|████▍     | 4/9 [02:01<02:31, 30.28s/block] 56%|█████▌    | 5/9 [02:35<02:04, 31.06s/block] 67%|██████▋   | 6/9 [03:07<01:33, 31.30s/block] 78%|███████▊  | 7/9 [03:39<01:02, 31.40s/block] 89%|████████▉ | 8/9 [04:12<00:31, 31.57s/block]100%|██████████| 9/9 [04:44<00:00, 31.56s/block]
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:31<04:11, 31.38s/block] 22%|██▏       | 2/9 [01:03<03:43, 32.00s/block] 33%|███▎      | 3/9 [01:34<03:08, 31.41s/block] 44%|████▍     | 4/9 [02:03<02:34, 30.95s/block] 56%|█████▌    | 5/9 [02:35<02:04, 31.05s/block] 67%|██████▋   | 6/9 [03:05<01:32, 30.90s/block] 78%|███████▊  | 7/9 [03:37<01:02, 31.07s/block] 89%|████████▉ | 8/9 [04:08<00:31, 31.10s/block]100%|██████████| 9/9 [04:40<00:00, 31.16s/block]
+/volatile/anaconda3/lib/python3.6/site-packages/nilearn/plotting/displays.py:684: UserWarning: empty mask
+  get_mask_bounds(new_img_like(img, not_mask, affine))
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:32<04:17, 32.19s/block] 22%|██▏       | 2/9 [01:03<03:42, 31.72s/block] 33%|███▎      | 3/9 [01:32<03:05, 30.97s/block] 44%|████▍     | 4/9 [02:02<02:32, 30.57s/block] 56%|█████▌    | 5/9 [02:34<02:03, 30.87s/block] 67%|██████▋   | 6/9 [03:05<01:32, 30.97s/block] 78%|███████▊  | 7/9 [03:38<01:02, 31.27s/block] 89%|████████▉ | 8/9 [04:10<00:31, 31.34s/block]100%|██████████| 9/9 [04:41<00:00, 31.23s/block]
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:31<04:10, 31.28s/block] 22%|██▏       | 2/9 [01:04<03:44, 32.03s/block] 33%|███▎      | 3/9 [01:35<03:10, 31.75s/block] 44%|████▍     | 4/9 [02:04<02:35, 31.03s/block] 56%|█████▌    | 5/9 [02:35<02:04, 31.03s/block] 67%|██████▋   | 6/9 [03:02<01:31, 30.48s/block] 78%|███████▊  | 7/9 [03:32<01:00, 30.33s/block] 89%|████████▉ | 8/9 [04:03<00:30, 30.46s/block]100%|██████████| 9/9 [04:34<00:00, 30.53s/block]
+/volatile/anaconda3/lib/python3.6/site-packages/nilearn/plotting/displays.py:684: UserWarning: empty mask
+  get_mask_bounds(new_img_like(img, not_mask, affine))
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:31<04:15, 31.97s/block] 22%|██▏       | 2/9 [01:03<03:42, 31.86s/block] 33%|███▎      | 3/9 [01:33<03:06, 31.05s/block] 44%|████▍     | 4/9 [02:02<02:33, 30.61s/block] 56%|█████▌    | 5/9 [02:33<02:02, 30.69s/block] 67%|██████▋   | 6/9 [03:03<01:31, 30.59s/block] 78%|███████▊  | 7/9 [03:35<01:01, 30.74s/block] 89%|████████▉ | 8/9 [04:04<00:30, 30.51s/block]100%|██████████| 9/9 [04:35<00:00, 30.62s/block]
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:33<04:26, 33.31s/block] 22%|██▏       | 2/9 [01:02<03:39, 31.34s/block] 33%|███▎      | 3/9 [01:33<03:06, 31.02s/block] 44%|████▍     | 4/9 [02:05<02:37, 31.42s/block] 56%|█████▌    | 5/9 [02:35<02:04, 31.02s/block] 67%|██████▋   | 6/9 [03:06<01:33, 31.08s/block] 78%|███████▊  | 7/9 [03:37<01:02, 31.14s/block] 89%|████████▉ | 8/9 [04:08<00:31, 31.11s/block]100%|██████████| 9/9 [04:37<00:00, 30.84s/block]
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:32<04:16, 32.04s/block] 22%|██▏       | 2/9 [00:59<03:29, 29.87s/block] 33%|███▎      | 3/9 [01:35<03:11, 31.94s/block] 44%|████▍     | 4/9 [02:04<02:35, 31.19s/block] 56%|█████▌    | 5/9 [02:38<02:06, 31.71s/block] 67%|██████▋   | 6/9 [03:09<01:34, 31.55s/block] 78%|███████▊  | 7/9 [03:40<01:03, 31.54s/block] 89%|████████▉ | 8/9 [04:11<00:31, 31.40s/block]100%|██████████| 9/9 [04:42<00:00, 31.42s/block]
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:32<04:19, 32.50s/block] 22%|██▏       | 2/9 [01:03<03:42, 31.85s/block] 33%|███▎      | 3/9 [01:38<03:17, 32.90s/block] 44%|████▍     | 4/9 [02:11<02:44, 32.88s/block] 56%|█████▌    | 5/9 [02:41<02:08, 32.23s/block] 67%|██████▋   | 6/9 [03:12<01:36, 32.12s/block] 78%|███████▊  | 7/9 [03:43<01:03, 31.90s/block] 89%|████████▉ | 8/9 [04:14<00:31, 31.77s/block]100%|██████████| 9/9 [04:46<00:00, 31.80s/block]
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:31<04:13, 31.69s/block] 22%|██▏       | 2/9 [01:03<03:41, 31.64s/block] 33%|███▎      | 3/9 [01:34<03:09, 31.60s/block] 44%|████▍     | 4/9 [02:02<02:32, 30.56s/block] 56%|█████▌    | 5/9 [02:30<02:00, 30.06s/block] 67%|██████▋   | 6/9 [02:59<01:29, 29.91s/block] 78%|███████▊  | 7/9 [03:31<01:00, 30.16s/block] 89%|████████▉ | 8/9 [04:01<00:30, 30.14s/block]100%|██████████| 9/9 [04:28<00:00, 29.81s/block]
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:30<04:07, 30.98s/block] 22%|██▏       | 2/9 [01:02<03:40, 31.47s/block] 33%|███▎      | 3/9 [01:31<03:03, 30.51s/block] 44%|████▍     | 4/9 [02:02<02:33, 30.61s/block] 56%|█████▌    | 5/9 [02:32<02:02, 30.50s/block] 67%|██████▋   | 6/9 [03:01<01:30, 30.33s/block] 78%|███████▊  | 7/9 [03:31<01:00, 30.27s/block] 89%|████████▉ | 8/9 [04:04<00:30, 30.57s/block]100%|██████████| 9/9 [04:36<00:00, 30.69s/block]
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:32<04:17, 32.24s/block] 22%|██▏       | 2/9 [01:02<03:37, 31.05s/block] 33%|███▎      | 3/9 [01:30<03:00, 30.17s/block] 44%|████▍     | 4/9 [02:01<02:32, 30.44s/block] 56%|█████▌    | 5/9 [02:35<02:04, 31.04s/block] 67%|██████▋   | 6/9 [03:06<01:33, 31.16s/block] 78%|███████▊  | 7/9 [03:38<01:02, 31.27s/block] 89%|████████▉ | 8/9 [04:05<00:30, 30.72s/block]100%|██████████| 9/9 [04:38<00:00, 30.93s/block]
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:31<04:11, 31.45s/block] 22%|██▏       | 2/9 [01:01<03:33, 30.57s/block] 33%|███▎      | 3/9 [01:33<03:07, 31.19s/block] 44%|████▍     | 4/9 [02:06<02:37, 31.50s/block] 56%|█████▌    | 5/9 [02:37<02:05, 31.48s/block] 67%|██████▋   | 6/9 [03:11<01:35, 31.84s/block] 78%|███████▊  | 7/9 [03:46<01:04, 32.39s/block] 89%|████████▉ | 8/9 [04:17<00:32, 32.21s/block]100%|██████████| 9/9 [04:49<00:00, 32.15s/block]
+/volatile/anaconda3/lib/python3.6/site-packages/nilearn/plotting/displays.py:684: UserWarning: empty mask
+  get_mask_bounds(new_img_like(img, not_mask, affine))
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:30<04:06, 30.86s/block] 22%|██▏       | 2/9 [01:04<03:45, 32.16s/block] 33%|███▎      | 3/9 [01:36<03:12, 32.12s/block] 44%|████▍     | 4/9 [02:09<02:41, 32.31s/block] 56%|█████▌    | 5/9 [02:41<02:09, 32.38s/block] 67%|██████▋   | 6/9 [03:12<01:36, 32.02s/block] 78%|███████▊  | 7/9 [03:43<01:03, 31.87s/block] 89%|████████▉ | 8/9 [04:15<00:31, 31.95s/block]100%|██████████| 9/9 [04:52<00:00, 32.46s/block]
+/volatile/anaconda3/lib/python3.6/site-packages/nilearn/plotting/displays.py:684: UserWarning: empty mask
+  get_mask_bounds(new_img_like(img, not_mask, affine))
+Subject :  57 | ROI :  All  | File :  shuffle_basic_WE_300  | Hash :  a3850c13e1cf41018eee14946ce4485b6a8f2ae6
+Generating data ...
+Loading data ...
+Training ...
+Figure Path :  /neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/glass_brain/Sub_57/All/R_squared_test_shuffle_basic_WE_300.png
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:29<03:58, 29.84s/block] 22%|██▏       | 2/9 [01:03<03:43, 31.87s/block] 33%|███▎      | 3/9 [01:35<03:10, 31.69s/block] 44%|████▍     | 4/9 [02:07<02:39, 31.99s/block] 56%|█████▌    | 5/9 [02:40<02:08, 32.05s/block] 67%|██████▋   | 6/9 [03:14<01:37, 32.43s/block] 78%|███████▊  | 7/9 [03:47<01:05, 32.55s/block] 89%|████████▉ | 8/9 [04:21<00:32, 32.65s/block]100%|██████████| 9/9 [04:56<00:00, 32.89s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:35<04:43, 35.39s/block] 22%|██▏       | 2/9 [01:10<04:06, 35.21s/block] 33%|███▎      | 3/9 [01:43<03:26, 34.41s/block] 44%|████▍     | 4/9 [02:15<02:49, 33.81s/block] 56%|█████▌    | 5/9 [02:47<02:13, 33.43s/block] 67%|██████▋   | 6/9 [03:20<01:40, 33.47s/block] 78%|███████▊  | 7/9 [03:50<01:05, 32.93s/block] 89%|████████▉ | 8/9 [04:18<00:32, 32.37s/block]100%|██████████| 9/9 [04:50<00:00, 32.23s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:31<04:09, 31.15s/block] 22%|██▏       | 2/9 [01:04<03:47, 32.43s/block] 33%|███▎      | 3/9 [01:37<03:15, 32.55s/block] 44%|████▍     | 4/9 [02:09<02:41, 32.40s/block] 56%|█████▌    | 5/9 [02:43<02:11, 32.77s/block] 67%|██████▋   | 6/9 [03:16<01:38, 32.67s/block] 78%|███████▊  | 7/9 [03:48<01:05, 32.60s/block] 89%|████████▉ | 8/9 [04:20<00:32, 32.56s/block]100%|██████████| 9/9 [04:51<00:00, 32.39s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:32<04:21, 32.75s/block] 22%|██▏       | 2/9 [01:05<03:49, 32.77s/block] 33%|███▎      | 3/9 [01:40<03:21, 33.54s/block] 44%|████▍     | 4/9 [02:08<02:41, 32.25s/block] 56%|█████▌    | 5/9 [02:42<02:09, 32.44s/block] 67%|██████▋   | 6/9 [03:13<01:36, 32.20s/block] 78%|███████▊  | 7/9 [03:43<01:03, 31.90s/block] 89%|████████▉ | 8/9 [04:13<00:31, 31.64s/block]100%|██████████| 9/9 [04:41<00:00, 31.25s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:31<04:09, 31.17s/block] 22%|██▏       | 2/9 [01:04<03:46, 32.39s/block] 33%|███▎      | 3/9 [01:35<03:11, 31.90s/block] 44%|████▍     | 4/9 [02:10<02:43, 32.71s/block] 56%|█████▌    | 5/9 [02:44<02:11, 32.94s/block] 67%|██████▋   | 6/9 [03:17<01:38, 32.91s/block] 78%|███████▊  | 7/9 [03:50<01:05, 32.98s/block] 89%|████████▉ | 8/9 [04:24<00:33, 33.02s/block]100%|██████████| 9/9 [04:55<00:00, 32.88s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:33<04:26, 33.30s/block] 22%|██▏       | 2/9 [01:04<03:46, 32.41s/block] 33%|███▎      | 3/9 [01:36<03:13, 32.25s/block] 44%|████▍     | 4/9 [02:06<02:37, 31.52s/block] 56%|█████▌    | 5/9 [02:40<02:08, 32.02s/block] 67%|██████▋   | 6/9 [03:12<01:36, 32.10s/block] 78%|███████▊  | 7/9 [03:45<01:04, 32.26s/block] 89%|████████▉ | 8/9 [04:16<00:32, 32.04s/block]100%|██████████| 9/9 [04:49<00:00, 32.22s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:34<04:38, 34.83s/block] 22%|██▏       | 2/9 [01:04<03:46, 32.38s/block] 33%|███▎      | 3/9 [01:37<03:15, 32.62s/block] 44%|████▍     | 4/9 [02:11<02:44, 32.98s/block] 56%|█████▌    | 5/9 [02:45<02:12, 33.06s/block] 67%|██████▋   | 6/9 [03:20<01:40, 33.35s/block] 78%|███████▊  | 7/9 [03:52<01:06, 33.21s/block] 89%|████████▉ | 8/9 [04:25<00:33, 33.21s/block]100%|██████████| 9/9 [04:54<00:00, 32.78s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:35<04:41, 35.25s/block] 22%|██▏       | 2/9 [01:08<03:58, 34.00s/block] 33%|███▎      | 3/9 [01:45<03:30, 35.08s/block] 44%|████▍     | 4/9 [02:16<02:51, 34.23s/block] 56%|█████▌    | 5/9 [02:50<02:16, 34.14s/block] 67%|██████▋   | 6/9 [03:20<01:40, 33.43s/block] 78%|███████▊  | 7/9 [03:53<01:06, 33.39s/block] 89%|████████▉ | 8/9 [04:24<00:33, 33.01s/block]100%|██████████| 9/9 [04:52<00:00, 32.48s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:32<04:19, 32.47s/block] 22%|██▏       | 2/9 [01:00<03:31, 30.21s/block] 33%|███▎      | 3/9 [01:32<03:04, 30.69s/block] 44%|████▍     | 4/9 [02:04<02:35, 31.10s/block] 56%|█████▌    | 5/9 [02:36<02:04, 31.22s/block] 67%|██████▋   | 6/9 [03:08<01:34, 31.38s/block] 78%|███████▊  | 7/9 [03:42<01:03, 31.74s/block] 89%|████████▉ | 8/9 [04:16<00:32, 32.00s/block]100%|██████████| 9/9 [04:52<00:00, 32.45s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:33<04:30, 33.76s/block] 22%|██▏       | 2/9 [01:06<03:53, 33.38s/block] 33%|███▎      | 3/9 [01:37<03:15, 32.65s/block] 44%|████▍     | 4/9 [02:09<02:41, 32.35s/block] 56%|█████▌    | 5/9 [02:38<02:07, 31.78s/block] 67%|██████▋   | 6/9 [03:07<01:33, 31.25s/block] 78%|███████▊  | 7/9 [03:38<01:02, 31.16s/block] 89%|████████▉ | 8/9 [04:10<00:31, 31.31s/block]100%|██████████| 9/9 [04:39<00:00, 31.11s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:34<04:39, 34.89s/block] 22%|██▏       | 2/9 [01:08<03:59, 34.23s/block] 33%|███▎      | 3/9 [01:38<03:17, 32.84s/block] 44%|████▍     | 4/9 [02:11<02:44, 32.87s/block] 56%|█████▌    | 5/9 [02:41<02:09, 32.37s/block] 67%|██████▋   | 6/9 [03:13<01:36, 32.21s/block] 78%|███████▊  | 7/9 [03:46<01:04, 32.34s/block] 89%|████████▉ | 8/9 [04:18<00:32, 32.26s/block]100%|██████████| 9/9 [04:49<00:00, 32.12s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:35<04:46, 35.85s/block] 22%|██▏       | 2/9 [01:08<03:59, 34.26s/block] 33%|███▎      | 3/9 [01:39<03:19, 33.24s/block] 44%|████▍     | 4/9 [02:09<02:42, 32.48s/block] 56%|█████▌    | 5/9 [02:40<02:08, 32.07s/block] 67%|██████▋   | 6/9 [03:13<01:36, 32.29s/block] 78%|███████▊  | 7/9 [03:48<01:05, 32.68s/block] 89%|████████▉ | 8/9 [04:23<00:32, 32.95s/block]100%|██████████| 9/9 [04:56<00:00, 33.00s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:35<04:42, 35.28s/block] 22%|██▏       | 2/9 [01:09<04:02, 34.71s/block] 33%|███▎      | 3/9 [01:43<03:26, 34.40s/block] 44%|████▍     | 4/9 [02:14<02:48, 33.66s/block] 56%|█████▌    | 5/9 [02:47<02:13, 33.40s/block] 67%|██████▋   | 6/9 [03:20<01:40, 33.39s/block] 78%|███████▊  | 7/9 [03:49<01:05, 32.85s/block] 89%|████████▉ | 8/9 [04:23<00:32, 32.94s/block]100%|██████████| 9/9 [04:53<00:00, 32.62s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:32<04:18, 32.33s/block] 22%|██▏       | 2/9 [01:06<03:51, 33.08s/block] 33%|███▎      | 3/9 [01:39<03:18, 33.14s/block] 44%|████▍     | 4/9 [02:07<02:39, 31.85s/block] 56%|█████▌    | 5/9 [02:42<02:09, 32.41s/block] 67%|██████▋   | 6/9 [03:15<01:37, 32.64s/block] 78%|███████▊  | 7/9 [03:50<01:05, 32.87s/block] 89%|████████▉ | 8/9 [04:25<00:33, 33.20s/block]100%|██████████| 9/9 [05:02<00:00, 33.66s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:32<04:16, 32.10s/block] 22%|██▏       | 2/9 [01:04<03:45, 32.25s/block] 33%|███▎      | 3/9 [01:34<03:09, 31.66s/block] 44%|████▍     | 4/9 [02:07<02:39, 31.85s/block] 56%|█████▌    | 5/9 [02:40<02:08, 32.10s/block] 67%|██████▋   | 6/9 [03:10<01:35, 31.71s/block] 78%|███████▊  | 7/9 [03:43<01:03, 31.86s/block] 89%|████████▉ | 8/9 [04:16<00:32, 32.11s/block]100%|██████████| 9/9 [04:48<00:00, 32.09s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:32<04:21, 32.69s/block] 22%|██▏       | 2/9 [01:04<03:46, 32.29s/block] 33%|███▎      | 3/9 [01:37<03:14, 32.43s/block] 44%|████▍     | 4/9 [02:10<02:43, 32.63s/block] 56%|█████▌    | 5/9 [02:41<02:09, 32.37s/block] 67%|██████▋   | 6/9 [03:14<01:37, 32.41s/block] 78%|███████▊  | 7/9 [03:47<01:05, 32.53s/block] 89%|████████▉ | 8/9 [04:20<00:32, 32.62s/block]100%|██████████| 9/9 [04:58<00:00, 33.22s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:35<04:43, 35.41s/block] 22%|██▏       | 2/9 [01:11<04:10, 35.78s/block] 33%|███▎      | 3/9 [01:44<03:28, 34.68s/block] 44%|████▍     | 4/9 [02:14<02:48, 33.73s/block] 56%|█████▌    | 5/9 [02:48<02:14, 33.69s/block] 67%|██████▋   | 6/9 [03:19<01:39, 33.18s/block] 78%|███████▊  | 7/9 [03:51<01:06, 33.03s/block] 89%|████████▉ | 8/9 [04:21<00:32, 32.69s/block]100%|██████████| 9/9 [04:53<00:00, 32.59s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:36<04:50, 36.33s/block] 22%|██▏       | 2/9 [01:11<04:10, 35.80s/block] 33%|███▎      | 3/9 [01:45<03:31, 35.17s/block] 44%|████▍     | 4/9 [02:16<02:50, 34.12s/block] 56%|█████▌    | 5/9 [02:47<02:13, 33.43s/block] 67%|██████▋   | 6/9 [03:18<01:39, 33.01s/block] 78%|███████▊  | 7/9 [03:54<01:07, 33.51s/block] 89%|████████▉ | 8/9 [04:25<00:33, 33.17s/block]100%|██████████| 9/9 [04:57<00:00, 33.07s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:31<04:10, 31.25s/block] 22%|██▏       | 2/9 [01:04<03:45, 32.15s/block] 33%|███▎      | 3/9 [01:36<03:12, 32.11s/block] 44%|████▍     | 4/9 [02:09<02:42, 32.45s/block] 56%|█████▌    | 5/9 [02:42<02:09, 32.43s/block] 67%|██████▋   | 6/9 [03:12<01:36, 32.03s/block] 78%|███████▊  | 7/9 [03:39<01:02, 31.38s/block] 89%|████████▉ | 8/9 [04:10<00:31, 31.28s/block]100%|██████████| 9/9 [04:45<00:00, 31.77s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:33<04:26, 33.27s/block] 22%|██▏       | 2/9 [01:06<03:52, 33.24s/block] 33%|███▎      | 3/9 [01:43<03:26, 34.36s/block] 44%|████▍     | 4/9 [02:18<02:52, 34.59s/block] 56%|█████▌    | 5/9 [02:50<02:16, 34.05s/block] 67%|██████▋   | 6/9 [03:19<01:39, 33.18s/block] 78%|███████▊  | 7/9 [03:50<01:05, 32.88s/block] 89%|████████▉ | 8/9 [04:24<00:33, 33.12s/block]100%|██████████| 9/9 [04:58<00:00, 33.13s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:29<03:57, 29.70s/block] 22%|██▏       | 2/9 [01:02<03:38, 31.21s/block] 33%|███▎      | 3/9 [01:33<03:07, 31.17s/block] 44%|████▍     | 4/9 [02:07<02:38, 31.76s/block] 56%|█████▌    | 5/9 [02:35<02:04, 31.14s/block] 67%|██████▋   | 6/9 [03:11<01:35, 31.85s/block] 78%|███████▊  | 7/9 [03:41<01:03, 31.68s/block] 89%|████████▉ | 8/9 [04:17<00:32, 32.22s/block]100%|██████████| 9/9 [04:47<00:00, 32.00s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:32<04:18, 32.35s/block] 22%|██▏       | 2/9 [01:04<03:46, 32.31s/block] 33%|███▎      | 3/9 [01:36<03:12, 32.11s/block] 44%|████▍     | 4/9 [02:11<02:44, 32.82s/block] 56%|█████▌    | 5/9 [02:46<02:13, 33.37s/block] 67%|██████▋   | 6/9 [03:17<01:38, 32.97s/block] 78%|███████▊  | 7/9 [03:53<01:06, 33.30s/block] 89%|████████▉ | 8/9 [04:23<00:32, 32.97s/block]100%|██████████| 9/9 [04:56<00:00, 32.92s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:27<03:37, 27.24s/block] 22%|██▏       | 2/9 [00:56<03:19, 28.48s/block] 33%|███▎      | 3/9 [01:28<02:56, 29.41s/block] 44%|████▍     | 4/9 [02:01<02:31, 30.29s/block] 56%|█████▌    | 5/9 [02:34<02:03, 30.81s/block] 67%|██████▋   | 6/9 [03:06<01:33, 31.15s/block] 78%|███████▊  | 7/9 [03:39<01:02, 31.34s/block] 89%|████████▉ | 8/9 [04:13<00:31, 31.69s/block]100%|██████████| 9/9 [04:47<00:00, 31.93s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:29<03:52, 29.08s/block] 22%|██▏       | 2/9 [00:58<03:25, 29.36s/block] 33%|███▎      | 3/9 [01:34<03:08, 31.38s/block] 44%|████▍     | 4/9 [02:03<02:34, 30.85s/block] 56%|█████▌    | 5/9 [02:34<02:03, 30.98s/block] 67%|██████▋   | 6/9 [03:09<01:34, 31.63s/block] 78%|███████▊  | 7/9 [03:42<01:03, 31.83s/block] 89%|████████▉ | 8/9 [04:13<00:31, 31.74s/block]100%|██████████| 9/9 [04:45<00:00, 31.74s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:32<04:23, 32.90s/block] 22%|██▏       | 2/9 [01:06<03:51, 33.02s/block] 33%|███▎      | 3/9 [01:39<03:19, 33.28s/block] 44%|████▍     | 4/9 [02:08<02:41, 32.21s/block] 56%|█████▌    | 5/9 [02:41<02:09, 32.27s/block] 67%|██████▋   | 6/9 [03:12<01:36, 32.11s/block] 78%|███████▊  | 7/9 [03:43<01:03, 31.86s/block] 89%|████████▉ | 8/9 [04:14<00:31, 31.75s/block]100%|██████████| 9/9 [04:48<00:00, 32.01s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:36<04:48, 36.10s/block] 22%|██▏       | 2/9 [01:06<03:54, 33.43s/block] 33%|███▎      | 3/9 [01:41<03:22, 33.81s/block] 44%|████▍     | 4/9 [02:13<02:47, 33.41s/block] 56%|█████▌    | 5/9 [02:49<02:15, 33.82s/block] 67%|██████▋   | 6/9 [03:23<01:41, 33.96s/block] 78%|███████▊  | 7/9 [03:54<01:06, 33.44s/block] 89%|████████▉ | 8/9 [04:27<00:33, 33.40s/block]100%|██████████| 9/9 [05:01<00:00, 33.54s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:34<04:33, 34.24s/block] 22%|██▏       | 2/9 [01:08<04:01, 34.44s/block] 33%|███▎      | 3/9 [01:42<03:25, 34.29s/block] 44%|████▍     | 4/9 [02:16<02:50, 34.11s/block] 56%|█████▌    | 5/9 [02:52<02:18, 34.55s/block] 67%|██████▋   | 6/9 [03:24<01:42, 34.05s/block] 78%|███████▊  | 7/9 [03:59<01:08, 34.26s/block] 89%|████████▉ | 8/9 [04:30<00:33, 33.82s/block]100%|██████████| 9/9 [05:02<00:00, 33.60s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:32<04:16, 32.04s/block] 22%|██▏       | 2/9 [01:03<03:41, 31.65s/block] 33%|███▎      | 3/9 [01:37<03:14, 32.37s/block] 44%|████▍     | 4/9 [02:06<02:38, 31.65s/block] 56%|█████▌    | 5/9 [02:37<02:06, 31.58s/block] 67%|██████▋   | 6/9 [03:13<01:36, 32.28s/block] 78%|███████▊  | 7/9 [03:51<01:06, 33.03s/block] 89%|████████▉ | 8/9 [04:21<00:32, 32.65s/block]100%|██████████| 9/9 [04:52<00:00, 32.52s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:34<04:39, 34.91s/block] 22%|██▏       | 2/9 [01:06<03:53, 33.39s/block] 33%|███▎      | 3/9 [01:41<03:23, 33.94s/block] 44%|████▍     | 4/9 [02:15<02:49, 33.80s/block] 56%|█████▌    | 5/9 [02:46<02:12, 33.21s/block] 67%|██████▋   | 6/9 [03:18<01:39, 33.09s/block] 78%|███████▊  | 7/9 [03:50<01:05, 32.95s/block] 89%|████████▉ | 8/9 [04:23<00:32, 32.89s/block]100%|██████████| 9/9 [04:55<00:00, 32.88s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:32<04:18, 32.35s/block] 22%|██▏       | 2/9 [01:06<03:53, 33.31s/block] 33%|███▎      | 3/9 [01:37<03:15, 32.52s/block] 44%|████▍     | 4/9 [02:13<02:46, 33.39s/block] 56%|█████▌    | 5/9 [02:47<02:14, 33.57s/block] 67%|██████▋   | 6/9 [03:21<01:40, 33.59s/block] 78%|███████▊  | 7/9 [03:54<01:07, 33.55s/block] 89%|████████▉ | 8/9 [04:26<00:33, 33.36s/block]100%|██████████| 9/9 [05:00<00:00, 33.39s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:33<04:28, 33.57s/block] 22%|██▏       | 2/9 [01:04<03:47, 32.48s/block] 33%|███▎      | 3/9 [01:36<03:12, 32.17s/block] 44%|████▍     | 4/9 [02:09<02:41, 32.28s/block] 56%|█████▌    | 5/9 [02:43<02:11, 32.78s/block] 67%|██████▋   | 6/9 [03:15<01:37, 32.59s/block] 78%|███████▊  | 7/9 [03:44<01:04, 32.06s/block] 89%|████████▉ | 8/9 [04:16<00:32, 32.11s/block]100%|██████████| 9/9 [04:49<00:00, 32.13s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:28<03:51, 28.95s/block] 22%|██▏       | 2/9 [01:02<03:39, 31.42s/block] 33%|███▎      | 3/9 [01:36<03:13, 32.31s/block] 44%|████▍     | 4/9 [02:09<02:42, 32.47s/block] 56%|█████▌    | 5/9 [02:41<02:09, 32.38s/block] 67%|██████▋   | 6/9 [03:17<01:38, 32.87s/block] 78%|███████▊  | 7/9 [03:48<01:05, 32.59s/block] 89%|████████▉ | 8/9 [04:24<00:33, 33.10s/block]100%|██████████| 9/9 [04:54<00:00, 32.68s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:31<04:14, 31.83s/block] 22%|██▏       | 2/9 [01:05<03:48, 32.59s/block] 33%|███▎      | 3/9 [01:37<03:14, 32.35s/block] 44%|████▍     | 4/9 [02:14<02:47, 33.51s/block] 56%|█████▌    | 5/9 [02:44<02:11, 32.99s/block] 67%|██████▋   | 6/9 [03:19<01:39, 33.25s/block] 78%|███████▊  | 7/9 [03:52<01:06, 33.15s/block] 89%|████████▉ | 8/9 [04:27<00:33, 33.41s/block]100%|██████████| 9/9 [04:59<00:00, 33.23s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:33<04:26, 33.28s/block] 22%|██▏       | 2/9 [01:07<03:57, 33.97s/block] 33%|███▎      | 3/9 [01:38<03:16, 32.70s/block] 44%|████▍     | 4/9 [02:08<02:40, 32.10s/block] 56%|█████▌    | 5/9 [02:38<02:06, 31.73s/block] 67%|██████▋   | 6/9 [03:12<01:36, 32.14s/block] 78%|███████▊  | 7/9 [03:45<01:04, 32.21s/block] 89%|████████▉ | 8/9 [04:19<00:32, 32.47s/block]100%|██████████| 9/9 [04:52<00:00, 32.47s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:32<04:22, 32.78s/block] 22%|██▏       | 2/9 [01:05<03:49, 32.78s/block] 33%|███▎      | 3/9 [01:38<03:17, 32.95s/block] 44%|████▍     | 4/9 [02:13<02:46, 33.27s/block] 56%|█████▌    | 5/9 [02:43<02:10, 32.63s/block] 67%|██████▋   | 6/9 [03:17<01:38, 32.94s/block] 78%|███████▊  | 7/9 [03:48<01:05, 32.62s/block] 89%|████████▉ | 8/9 [04:20<00:32, 32.59s/block]100%|██████████| 9/9 [04:53<00:00, 32.59s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:34<04:39, 34.94s/block] 22%|██▏       | 2/9 [01:09<04:04, 34.99s/block] 33%|███▎      | 3/9 [01:41<03:22, 33.75s/block] 44%|████▍     | 4/9 [02:13<02:47, 33.40s/block] 56%|█████▌    | 5/9 [02:47<02:13, 33.50s/block] 67%|██████▋   | 6/9 [03:19<01:39, 33.23s/block] 78%|███████▊  | 7/9 [03:51<01:06, 33.08s/block] 89%|████████▉ | 8/9 [04:25<00:33, 33.13s/block]100%|██████████| 9/9 [04:58<00:00, 33.18s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:31<04:13, 31.64s/block] 22%|██▏       | 2/9 [01:03<03:43, 31.97s/block] 33%|███▎      | 3/9 [01:35<03:11, 31.93s/block] 44%|████▍     | 4/9 [02:07<02:39, 31.99s/block] 56%|█████▌    | 5/9 [02:40<02:08, 32.00s/block] 67%|██████▋   | 6/9 [03:13<01:36, 32.29s/block] 78%|███████▊  | 7/9 [03:46<01:04, 32.30s/block] 89%|████████▉ | 8/9 [04:18<00:32, 32.26s/block]100%|██████████| 9/9 [04:50<00:00, 32.26s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:30<04:00, 30.06s/block] 22%|██▏       | 2/9 [01:03<03:41, 31.69s/block] 33%|███▎      | 3/9 [01:37<03:14, 32.46s/block] 44%|████▍     | 4/9 [02:11<02:44, 32.87s/block] 56%|█████▌    | 5/9 [02:42<02:10, 32.59s/block] 67%|██████▋   | 6/9 [03:19<01:39, 33.31s/block] 78%|███████▊  | 7/9 [03:53<01:06, 33.32s/block] 89%|████████▉ | 8/9 [04:25<00:33, 33.16s/block]100%|██████████| 9/9 [05:03<00:00, 33.71s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:35<04:46, 35.82s/block] 22%|██▏       | 2/9 [01:07<03:56, 33.82s/block] 33%|███▎      | 3/9 [01:40<03:20, 33.50s/block] 44%|████▍     | 4/9 [02:12<02:45, 33.14s/block] 56%|█████▌    | 5/9 [02:40<02:08, 32.19s/block] 67%|██████▋   | 6/9 [03:13<01:36, 32.32s/block] 78%|███████▊  | 7/9 [03:46<01:04, 32.30s/block] 89%|████████▉ | 8/9 [04:19<00:32, 32.39s/block]100%|██████████| 9/9 [04:52<00:00, 32.48s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:32<04:16, 32.04s/block] 22%|██▏       | 2/9 [01:05<03:47, 32.52s/block] 33%|███▎      | 3/9 [01:37<03:15, 32.66s/block] 44%|████▍     | 4/9 [02:11<02:44, 32.90s/block] 56%|█████▌    | 5/9 [02:41<02:09, 32.36s/block] 67%|██████▋   | 6/9 [03:15<01:37, 32.51s/block] 78%|███████▊  | 7/9 [03:45<01:04, 32.27s/block] 89%|████████▉ | 8/9 [04:19<00:32, 32.43s/block]100%|██████████| 9/9 [04:52<00:00, 32.47s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:35<04:42, 35.26s/block] 22%|██▏       | 2/9 [01:08<03:58, 34.12s/block] 33%|███▎      | 3/9 [01:39<03:19, 33.25s/block] 44%|████▍     | 4/9 [02:14<02:47, 33.53s/block] 56%|█████▌    | 5/9 [02:45<02:12, 33.07s/block] 67%|██████▋   | 6/9 [03:18<01:39, 33.16s/block] 78%|███████▊  | 7/9 [03:51<01:06, 33.03s/block] 89%|████████▉ | 8/9 [04:24<00:33, 33.03s/block]100%|██████████| 9/9 [05:00<00:00, 33.39s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:33<04:25, 33.23s/block] 22%|██▏       | 2/9 [01:04<03:46, 32.35s/block] 33%|███▎      | 3/9 [01:39<03:18, 33.13s/block] 44%|████▍     | 4/9 [02:10<02:42, 32.51s/block] 56%|█████▌    | 5/9 [02:43<02:11, 32.78s/block] 67%|██████▋   | 6/9 [03:15<01:37, 32.60s/block] 78%|███████▊  | 7/9 [03:48<01:05, 32.58s/block] 89%|████████▉ | 8/9 [04:21<00:32, 32.72s/block]100%|██████████| 9/9 [04:55<00:00, 32.83s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:31<04:08, 31.00s/block] 22%|██▏       | 2/9 [01:05<03:48, 32.64s/block] 33%|███▎      | 3/9 [01:35<03:11, 31.89s/block] 44%|████▍     | 4/9 [02:07<02:39, 31.82s/block] 56%|█████▌    | 5/9 [02:37<02:05, 31.46s/block] 67%|██████▋   | 6/9 [03:06<01:33, 31.11s/block] 78%|███████▊  | 7/9 [03:39<01:02, 31.42s/block] 89%|████████▉ | 8/9 [04:10<00:31, 31.36s/block]100%|██████████| 9/9 [04:44<00:00, 31.65s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:32<04:22, 32.78s/block] 22%|██▏       | 2/9 [01:06<03:53, 33.40s/block] 33%|███▎      | 3/9 [01:39<03:18, 33.07s/block] 44%|████▍     | 4/9 [02:12<02:45, 33.19s/block] 56%|█████▌    | 5/9 [02:43<02:10, 32.66s/block] 67%|██████▋   | 6/9 [03:12<01:36, 32.09s/block] 78%|███████▊  | 7/9 [03:45<01:04, 32.27s/block] 89%|████████▉ | 8/9 [04:17<00:32, 32.19s/block]100%|██████████| 9/9 [04:50<00:00, 32.31s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:32<04:18, 32.32s/block] 22%|██▏       | 2/9 [01:02<03:38, 31.21s/block] 33%|███▎      | 3/9 [01:38<03:17, 33.00s/block] 44%|████▍     | 4/9 [02:10<02:43, 32.69s/block] 56%|█████▌    | 5/9 [02:45<02:12, 33.01s/block] 67%|██████▋   | 6/9 [03:12<01:36, 32.08s/block] 78%|███████▊  | 7/9 [03:44<01:04, 32.12s/block] 89%|████████▉ | 8/9 [04:16<00:32, 32.09s/block]100%|██████████| 9/9 [04:45<00:00, 31.70s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:31<04:10, 31.27s/block] 22%|██▏       | 2/9 [01:03<03:41, 31.67s/block] 33%|███▎      | 3/9 [01:33<03:07, 31.17s/block] 44%|████▍     | 4/9 [02:07<02:38, 31.78s/block] 56%|█████▌    | 5/9 [02:40<02:08, 32.08s/block] 67%|██████▋   | 6/9 [03:10<01:35, 31.83s/block] 78%|███████▊  | 7/9 [03:47<01:04, 32.43s/block] 89%|████████▉ | 8/9 [04:18<00:32, 32.34s/block]100%|██████████| 9/9 [04:52<00:00, 32.46s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:33<04:25, 33.19s/block] 22%|██▏       | 2/9 [01:06<03:53, 33.33s/block] 33%|███▎      | 3/9 [01:36<03:13, 32.27s/block] 44%|████▍     | 4/9 [02:07<02:39, 31.95s/block] 56%|█████▌    | 5/9 [02:43<02:11, 32.79s/block] 67%|██████▋   | 6/9 [03:18<01:39, 33.13s/block] 78%|███████▊  | 7/9 [03:52<01:06, 33.16s/block] 89%|████████▉ | 8/9 [04:23<00:32, 32.95s/block]100%|██████████| 9/9 [04:55<00:00, 32.85s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:35<04:40, 35.10s/block] 22%|██▏       | 2/9 [01:05<03:49, 32.73s/block] 33%|███▎      | 3/9 [01:37<03:15, 32.64s/block] 44%|████▍     | 4/9 [02:11<02:44, 32.88s/block] 56%|█████▌    | 5/9 [02:43<02:10, 32.74s/block] 67%|██████▋   | 6/9 [03:20<01:40, 33.44s/block] 78%|███████▊  | 7/9 [03:53<01:06, 33.32s/block] 89%|████████▉ | 8/9 [04:26<00:33, 33.31s/block]100%|██████████| 9/9 [04:57<00:00, 33.03s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:34<04:39, 34.91s/block] 22%|██▏       | 2/9 [01:05<03:49, 32.72s/block] 33%|███▎      | 3/9 [01:39<03:19, 33.29s/block] 44%|████▍     | 4/9 [02:14<02:48, 33.75s/block] 56%|█████▌    | 5/9 [02:49<02:15, 33.84s/block] 67%|██████▋   | 6/9 [03:19<01:39, 33.17s/block] 78%|███████▊  | 7/9 [03:48<01:05, 32.62s/block] 89%|████████▉ | 8/9 [04:16<00:32, 32.08s/block]100%|██████████| 9/9 [04:50<00:00, 32.23s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:35<04:45, 35.71s/block] 22%|██▏       | 2/9 [01:04<03:46, 32.40s/block] 33%|███▎      | 3/9 [01:36<03:12, 32.01s/block] 44%|████▍     | 4/9 [02:10<02:42, 32.58s/block] 56%|█████▌    | 5/9 [02:40<02:08, 32.20s/block] 67%|██████▋   | 6/9 [03:16<01:38, 32.68s/block] 78%|███████▊  | 7/9 [03:48<01:05, 32.68s/block] 89%|████████▉ | 8/9 [04:22<00:32, 32.75s/block]100%|██████████| 9/9 [04:53<00:00, 32.62s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:34<04:36, 34.51s/block] 22%|██▏       | 2/9 [01:10<04:08, 35.49s/block] 33%|███▎      | 3/9 [01:43<03:26, 34.44s/block] 44%|████▍     | 4/9 [02:13<02:46, 33.26s/block] 56%|█████▌    | 5/9 [02:45<02:12, 33.18s/block] 67%|██████▋   | 6/9 [03:20<01:40, 33.40s/block] 78%|███████▊  | 7/9 [03:50<01:05, 32.97s/block] 89%|████████▉ | 8/9 [04:24<00:33, 33.07s/block]100%|██████████| 9/9 [04:52<00:00, 32.51s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:33<04:31, 33.92s/block] 22%|██▏       | 2/9 [01:04<03:46, 32.38s/block] 33%|███▎      | 3/9 [01:33<03:07, 31.29s/block] 44%|████▍     | 4/9 [02:06<02:38, 31.74s/block] 56%|█████▌    | 5/9 [02:37<02:05, 31.43s/block] 67%|██████▋   | 6/9 [03:07<01:33, 31.17s/block] 78%|███████▊  | 7/9 [03:36<01:01, 30.88s/block] 89%|████████▉ | 8/9 [04:07<00:30, 30.99s/block]100%|██████████| 9/9 [04:41<00:00, 31.31s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:33<04:30, 33.82s/block] 22%|██▏       | 2/9 [01:03<03:43, 31.94s/block] 33%|███▎      | 3/9 [01:37<03:14, 32.49s/block] 44%|████▍     | 4/9 [02:10<02:42, 32.51s/block] 56%|█████▌    | 5/9 [02:43<02:10, 32.63s/block] 67%|██████▋   | 6/9 [03:16<01:38, 32.78s/block] 78%|███████▊  | 7/9 [03:47<01:04, 32.47s/block] 89%|████████▉ | 8/9 [04:18<00:32, 32.29s/block]100%|██████████| 9/9 [04:48<00:00, 32.11s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:30<04:00, 30.09s/block] 22%|██▏       | 2/9 [00:59<03:26, 29.57s/block] 33%|███▎      | 3/9 [01:28<02:57, 29.52s/block] 44%|████▍     | 4/9 [01:58<02:28, 29.63s/block] 56%|█████▌    | 5/9 [02:31<02:01, 30.27s/block] 67%|██████▋   | 6/9 [03:02<01:31, 30.44s/block] 78%|███████▊  | 7/9 [03:36<01:01, 30.90s/block] 89%|████████▉ | 8/9 [04:07<00:30, 30.94s/block]100%|██████████| 9/9 [04:38<00:00, 30.99s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:31<04:09, 31.18s/block] 22%|██▏       | 2/9 [01:02<03:39, 31.36s/block] 33%|███▎      | 3/9 [01:36<03:12, 32.10s/block] 44%|████▍     | 4/9 [02:08<02:40, 32.10s/block] 56%|█████▌    | 5/9 [02:46<02:12, 33.22s/block] 67%|██████▋   | 6/9 [03:18<01:39, 33.15s/block] 78%|███████▊  | 7/9 [03:50<01:05, 32.93s/block] 89%|████████▉ | 8/9 [04:26<00:33, 33.26s/block]100%|██████████| 9/9 [04:57<00:00, 33.04s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:33<04:24, 33.04s/block] 22%|██▏       | 2/9 [01:07<03:57, 33.91s/block] 33%|███▎      | 3/9 [01:37<03:15, 32.60s/block] 44%|████▍     | 4/9 [02:11<02:44, 32.83s/block] 56%|█████▌    | 5/9 [02:44<02:11, 32.95s/block] 67%|██████▋   | 6/9 [03:18<01:39, 33.04s/block] 78%|███████▊  | 7/9 [03:47<01:04, 32.44s/block] 89%|████████▉ | 8/9 [04:20<00:32, 32.62s/block]100%|██████████| 9/9 [04:54<00:00, 32.73s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:33<04:25, 33.23s/block] 22%|██▏       | 2/9 [01:06<03:52, 33.17s/block] 33%|███▎      | 3/9 [01:38<03:17, 32.96s/block] 44%|████▍     | 4/9 [02:10<02:43, 32.61s/block] 56%|█████▌    | 5/9 [02:42<02:09, 32.46s/block] 67%|██████▋   | 6/9 [03:15<01:37, 32.63s/block] 78%|███████▊  | 7/9 [03:45<01:04, 32.28s/block] 89%|████████▉ | 8/9 [04:19<00:32, 32.44s/block]100%|██████████| 9/9 [04:52<00:00, 32.49s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:35<04:40, 35.01s/block] 22%|██▏       | 2/9 [01:07<03:57, 33.92s/block] 33%|███▎      | 3/9 [01:38<03:16, 32.81s/block] 44%|████▍     | 4/9 [02:09<02:42, 32.49s/block] 56%|█████▌    | 5/9 [02:40<02:08, 32.05s/block] 67%|██████▋   | 6/9 [03:16<01:38, 32.70s/block] 78%|███████▊  | 7/9 [03:49<01:05, 32.81s/block] 89%|████████▉ | 8/9 [04:18<00:32, 32.33s/block]100%|██████████| 9/9 [04:54<00:00, 32.69s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:35<04:42, 35.28s/block] 22%|██▏       | 2/9 [01:06<03:52, 33.24s/block] 33%|███▎      | 3/9 [01:38<03:17, 32.98s/block] 44%|████▍     | 4/9 [02:10<02:43, 32.75s/block] 56%|█████▌    | 5/9 [02:43<02:10, 32.62s/block] 67%|██████▋   | 6/9 [03:15<01:37, 32.62s/block] 78%|███████▊  | 7/9 [03:46<01:04, 32.38s/block] 89%|████████▉ | 8/9 [04:20<00:32, 32.58s/block]100%|██████████| 9/9 [04:52<00:00, 32.49s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:35<04:42, 35.27s/block] 22%|██▏       | 2/9 [01:09<04:02, 34.71s/block] 33%|███▎      | 3/9 [01:40<03:21, 33.64s/block] 44%|████▍     | 4/9 [02:10<02:43, 32.66s/block] 56%|█████▌    | 5/9 [02:42<02:10, 32.57s/block] 67%|██████▋   | 6/9 [03:15<01:37, 32.60s/block] 78%|███████▊  | 7/9 [03:49<01:05, 32.83s/block] 89%|████████▉ | 8/9 [04:23<00:32, 32.93s/block]100%|██████████| 9/9 [04:58<00:00, 33.12s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:35<04:45, 35.72s/block] 22%|██▏       | 2/9 [01:08<04:01, 34.46s/block] 33%|███▎      | 3/9 [01:41<03:23, 33.93s/block] 44%|████▍     | 4/9 [02:14<02:47, 33.57s/block] 56%|█████▌    | 5/9 [02:48<02:14, 33.68s/block] 67%|██████▋   | 6/9 [03:19<01:39, 33.20s/block] 78%|███████▊  | 7/9 [03:52<01:06, 33.17s/block] 89%|████████▉ | 8/9 [04:23<00:32, 33.00s/block]100%|██████████| 9/9 [04:57<00:00, 33.08s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:36<04:51, 36.45s/block] 22%|██▏       | 2/9 [01:09<04:04, 34.88s/block] 33%|███▎      | 3/9 [01:43<03:27, 34.66s/block] 44%|████▍     | 4/9 [02:19<02:53, 34.76s/block] 56%|█████▌    | 5/9 [02:50<02:16, 34.13s/block] 67%|██████▋   | 6/9 [03:19<01:39, 33.30s/block] 78%|███████▊  | 7/9 [03:51<01:06, 33.11s/block] 89%|████████▉ | 8/9 [04:24<00:33, 33.01s/block]100%|██████████| 9/9 [04:55<00:00, 32.83s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:31<04:13, 31.70s/block] 22%|██▏       | 2/9 [01:03<03:42, 31.73s/block] 33%|███▎      | 3/9 [01:37<03:14, 32.41s/block] 44%|████▍     | 4/9 [02:10<02:43, 32.72s/block] 56%|█████▌    | 5/9 [02:42<02:09, 32.45s/block] 67%|██████▋   | 6/9 [03:15<01:37, 32.58s/block] 78%|███████▊  | 7/9 [03:48<01:05, 32.61s/block] 89%|████████▉ | 8/9 [04:21<00:32, 32.65s/block]100%|██████████| 9/9 [04:56<00:00, 32.91s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:33<04:29, 33.70s/block] 22%|██▏       | 2/9 [01:08<04:00, 34.39s/block] 33%|███▎      | 3/9 [01:41<03:22, 33.82s/block] 44%|████▍     | 4/9 [02:10<02:43, 32.62s/block] 56%|█████▌    | 5/9 [02:45<02:12, 33.06s/block] 67%|██████▋   | 6/9 [03:17<01:38, 32.90s/block] 78%|███████▊  | 7/9 [03:49<01:05, 32.74s/block] 89%|████████▉ | 8/9 [04:22<00:32, 32.79s/block]100%|██████████| 9/9 [04:51<00:00, 32.44s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:32<04:21, 32.73s/block] 22%|██▏       | 2/9 [01:06<03:51, 33.01s/block] 33%|███▎      | 3/9 [01:38<03:16, 32.79s/block] 44%|████▍     | 4/9 [02:07<02:39, 31.99s/block] 56%|█████▌    | 5/9 [02:42<02:09, 32.40s/block] 67%|██████▋   | 6/9 [03:15<01:37, 32.57s/block] 78%|███████▊  | 7/9 [03:45<01:04, 32.17s/block] 89%|████████▉ | 8/9 [04:17<00:32, 32.21s/block]100%|██████████| 9/9 [04:51<00:00, 32.42s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:31<04:14, 31.79s/block] 22%|██▏       | 2/9 [01:06<03:51, 33.02s/block] 33%|███▎      | 3/9 [01:38<03:17, 32.91s/block] 44%|████▍     | 4/9 [02:11<02:43, 32.76s/block] 56%|█████▌    | 5/9 [02:44<02:11, 32.89s/block] 67%|██████▋   | 6/9 [03:16<01:38, 32.79s/block] 78%|███████▊  | 7/9 [03:47<01:05, 32.53s/block] 89%|████████▉ | 8/9 [04:19<00:32, 32.43s/block]100%|██████████| 9/9 [04:52<00:00, 32.52s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:31<04:15, 31.97s/block] 22%|██▏       | 2/9 [01:05<03:49, 32.84s/block] 33%|███▎      | 3/9 [01:39<03:18, 33.03s/block] 44%|████▍     | 4/9 [02:12<02:45, 33.17s/block] 56%|█████▌    | 5/9 [02:45<02:12, 33.09s/block] 67%|██████▋   | 6/9 [03:19<01:39, 33.23s/block] 78%|███████▊  | 7/9 [03:52<01:06, 33.20s/block] 89%|████████▉ | 8/9 [04:21<00:32, 32.65s/block]100%|██████████| 9/9 [04:51<00:00, 32.41s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:35<04:40, 35.11s/block] 22%|██▏       | 2/9 [01:10<04:06, 35.21s/block] 33%|███▎      | 3/9 [01:44<03:29, 34.90s/block] 44%|████▍     | 4/9 [02:16<02:50, 34.15s/block] 56%|█████▌    | 5/9 [02:47<02:14, 33.57s/block] 67%|██████▋   | 6/9 [03:22<01:41, 33.78s/block] 78%|███████▊  | 7/9 [03:57<01:07, 33.89s/block] 89%|████████▉ | 8/9 [04:26<00:33, 33.34s/block]100%|██████████| 9/9 [04:55<00:00, 32.84s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:30<04:03, 30.42s/block] 22%|██▏       | 2/9 [01:05<03:48, 32.58s/block] 33%|███▎      | 3/9 [01:34<03:09, 31.61s/block] 44%|████▍     | 4/9 [02:09<02:42, 32.50s/block] 56%|█████▌    | 5/9 [02:40<02:08, 32.08s/block] 67%|██████▋   | 6/9 [03:12<01:36, 32.14s/block] 78%|███████▊  | 7/9 [03:45<01:04, 32.16s/block] 89%|████████▉ | 8/9 [04:17<00:32, 32.23s/block]100%|██████████| 9/9 [04:48<00:00, 32.10s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:34<04:34, 34.25s/block] 22%|██▏       | 2/9 [01:07<03:56, 33.79s/block] 33%|███▎      | 3/9 [01:39<03:18, 33.02s/block] 44%|████▍     | 4/9 [02:14<02:48, 33.68s/block] 56%|█████▌    | 5/9 [02:45<02:12, 33.02s/block] 67%|██████▋   | 6/9 [03:17<01:38, 32.96s/block] 78%|███████▊  | 7/9 [03:49<01:05, 32.81s/block] 89%|████████▉ | 8/9 [04:21<00:32, 32.71s/block]100%|██████████| 9/9 [04:54<00:00, 32.68s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:31<04:13, 31.71s/block] 22%|██▏       | 2/9 [01:05<03:49, 32.83s/block] 33%|███▎      | 3/9 [01:37<03:15, 32.63s/block] 44%|████▍     | 4/9 [02:10<02:43, 32.69s/block] 56%|█████▌    | 5/9 [02:44<02:11, 32.96s/block] 67%|██████▋   | 6/9 [03:18<01:39, 33.06s/block] 78%|███████▊  | 7/9 [03:51<01:06, 33.06s/block] 89%|████████▉ | 8/9 [04:22<00:32, 32.86s/block]100%|██████████| 9/9 [04:58<00:00, 33.12s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:30<04:07, 30.97s/block] 22%|██▏       | 2/9 [01:07<03:57, 33.92s/block] 33%|███▎      | 3/9 [01:41<03:22, 33.69s/block] 44%|████▍     | 4/9 [02:12<02:45, 33.19s/block] 56%|█████▌    | 5/9 [02:46<02:12, 33.23s/block] 67%|██████▋   | 6/9 [03:19<01:39, 33.26s/block] 78%|███████▊  | 7/9 [03:55<01:07, 33.59s/block] 89%|████████▉ | 8/9 [04:25<00:33, 33.15s/block]100%|██████████| 9/9 [04:55<00:00, 32.84s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:31<04:13, 31.66s/block] 22%|██▏       | 2/9 [01:02<03:39, 31.30s/block] 33%|███▎      | 3/9 [01:32<03:04, 30.69s/block] 44%|████▍     | 4/9 [02:04<02:35, 31.09s/block] 56%|█████▌    | 5/9 [02:36<02:05, 31.33s/block] 67%|██████▋   | 6/9 [03:08<01:34, 31.47s/block] 78%|███████▊  | 7/9 [03:40<01:03, 31.53s/block] 89%|████████▉ | 8/9 [04:13<00:31, 31.66s/block]100%|██████████| 9/9 [04:48<00:00, 32.00s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
+  0%|          | 0/9 [00:00<?, ?block/s] 11%|█         | 1/9 [00:34<04:32, 34.07s/block] 22%|██▏       | 2/9 [01:07<03:54, 33.54s/block] 33%|███▎      | 3/9 [01:38<03:17, 32.97s/block] 44%|████▍     | 4/9 [02:11<02:44, 32.87s/block] 56%|█████▌    | 5/9 [02:44<02:11, 32.96s/block] 67%|██████▋   | 6/9 [03:17<01:38, 32.88s/block] 78%|███████▊  | 7/9 [03:47<01:05, 32.50s/block] 89%|████████▉ | 8/9 [04:18<00:32, 32.36s/block]100%|██████████| 9/9 [04:48<00:00, 32.11s/block]qt.qpa.screen: QXcbConnection: Could not connect to display localhost:11.0
+Could not connect to any X display.
