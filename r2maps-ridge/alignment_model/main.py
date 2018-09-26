@@ -46,6 +46,7 @@ parser.add_argument('--shuffle', type=int, default=None,
 parser.add_argument('--p_value', '-pv', default=None,
 					help='Path to all matrices shuffled')
 
+
 args = parser.parse_args()
 
 # Generate a hash specific to arguments given. Used to retrieve data if data is already generated
@@ -104,16 +105,4 @@ r2_tests[r2_tests < 0], r2_tests[r2_tests > 0.99] = 0, 0
 if args.shuffle == None:
 	with open('save_r2test/{}_{}.pkl'.format(args.file, args.subject), 'wb') as f:
 		pickle.dump(r2_tests, f)
-
-#Load all shuffled matrices
-if args.p_value != None:
-	with open('shuffle/all_shuffle_{}.pkl'.format(args.file), 'rb') as f:
-		random_r2tests = pickle.load(f)
-		random_r2tests = np.vstack(random_r2tests)
-	p_value_mask = np.array([np.less_equal((sum(np.greater(random_r2tests[:, voxel], r2_tests[voxel])) + 1)/(len(random_r2tests[:, voxel]) + 1), 0.05) for voxel in tqdm(range(len(r2_tests)))])
-	print(p_value_mask)
-	r2_tests = np.multiply(r2_tests, p_value_mask)
-
-# Plot R_squared errors with glassbrain
-plot.glass_brain(r2_tests, args.subject, args.ROI, name_ROI, args.file)
 

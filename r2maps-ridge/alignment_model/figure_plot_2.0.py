@@ -13,22 +13,23 @@ args = parser.parse_args()
 
 plt.style.use('fivethirtyeight')
 
-with open('shuffle/all_shuffle_{}.pkl'.format('basic_features'), 'rb') as a:
-	random_r2tests_basic_features = pickle.load(a)
-	random_r2tests_basic_features = np.vstack(random_r2tests_basic_features)
-	random_r2tests_basic_features = np.amax(random_r2tests_basic_features, axis=1)
-with open('shuffle/all_shuffle_{}.pkl'.format('basic_WE_300'), 'rb') as b:
-	random_r2tests_basic_WE_300 = pickle.load(b)
-	random_r2tests_basic_WE_300 = np.vstack(random_r2tests_basic_WE_300)
-	random_r2tests_basic_WE_300 = np.amax(random_r2tests_basic_WE_300, axis=1)
-with open('shuffle/all_shuffle_{}.pkl'.format('basic_LSTM'), 'rb') as c:
-	random_r2tests_basic_LSTM = pickle.load(c)
-	random_r2tests_basic_LSTM = np.vstack(random_r2tests_basic_LSTM)
-	random_r2tests_basic_LSTM = np.amax(random_r2tests_basic_LSTM, axis=1)
+# Retrieve data
 
-random_r2tests_basic_features[random_r2tests_basic_features > 0.99] = 0
-random_r2tests_basic_WE_300[random_r2tests_basic_WE_300 > 0.99] = 0
-random_r2tests_basic_LSTM[random_r2tests_basic_LSTM > 0.99] = 0
+def retrieve_data(name):
+	retrieved_data = {}
+	with open('shuffle/all_shuffle_{}.pkl'.format(name), 'rb') as f:
+		retrieved_data[name] = np.amax(np.vstack(pickle.load(f)), axis=1)
+
+retrieve_data('basic_features')
+retrieve_data('basic_WE_300')
+retrieve_data('basic_LSTM')
+
+def clean_data(name):
+	retrieve_data[name][retrieve_data[name] > 0.99], retrieve_data[name][retrieve_data[name] < 0.0] = 0, 0
+
+clean_data('basic_features')
+clean_data('basic_WE_300')
+clean_data('basic_LSTM')
 
 # Clean by significance
 subjects = [57]
