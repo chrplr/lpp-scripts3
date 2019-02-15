@@ -4,6 +4,7 @@
 """ take a list of predictor names on the command line and compute the hrf convolved regressors from the corresponding onset files [1-0]_name.csv """
 
 import sys
+import os
 import os.path as op
 from events2reg import process_onefile
 from joblib import Parallel, delayed
@@ -24,7 +25,12 @@ parser.add_argument('regressors',
 args = parser.parse_args()
 regressors = args.regressors[0]
 
-nscans = [282, 298, 340, 303, 265, 343, 325, 292, 368]  # numbers of scans in each session
+if os.getenv('LINGUA') == 'en':
+    nscans = [282, 298, 340, 303, 265, 343, 325, 292, 368]  # numbers of scans in each session
+elif os.getenv('LINGUA') == 'fr':
+    nscans = [309, 326, 354, 315, 293, 378, 332, 294, 336]  # numbers of scans in each session
+else:
+    print('LINGUA not set! ')
 
 parameters = [('%d_%s.csv' % (1 + session, reg), ns)
               for reg in regressors for (session, ns) in enumerate(nscans)]

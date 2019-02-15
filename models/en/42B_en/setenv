@@ -1,0 +1,22 @@
+#! This must be sourced from 
+# Time-stamp: <2018-04-06 15:20:57 cp983411>
+
+#export ROOT_DIR=/neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/
+echo "ROOT_DIR=$ROOT_DIR"
+
+export MODEL="$(basename $1)"
+export MODEL_DIR="$PWD/$1"
+echo "MODEL_DIR=$MODEL_DIR"
+export REGS="42B_en_d001 42B_en_d002 42B_en_d003 42B_en_d004 42B_en_d005 42B_en_d006 42B_en_d007 42B_en_d008 42B_en_d009 42B_en_d010 42B_en_d011 42B_en_d012 42B_en_d013 42B_en_d014 42B_en_d015 42B_en_d016 42B_en_d017 42B_en_d018 42B_en_d019 42B_en_d020 42B_en_d021 42B_en_d022 42B_en_d023 42B_en_d024 42B_en_d025 42B_en_d026 42B_en_d027 42B_en_d028 42B_en_d029 42B_en_d030 42B_en_d031 42B_en_d032 42B_en_d033 42B_en_d034 42B_en_d035 42B_en_d036 42B_en_d037 42B_en_d038 42B_en_d039 42B_en_d040 42B_en_d041 42B_en_d042 42B_en_d043 42B_en_d044 42B_en_d045 42B_en_d046 42B_en_d047 42B_en_d048 42B_en_d049 42B_en_d050 42B_en_d051 42B_en_d052 42B_en_d053 42B_en_d054 42B_en_d055 42B_en_d056 42B_en_d057 42B_en_d058 42B_en_d059 42B_en_d060 42B_en_d061 42B_en_d062 42B_en_d063 42B_en_d064 42B_en_d065 42B_en_d066 42B_en_d067 42B_en_d068 42B_en_d069 42B_en_d070 42B_en_d071 42B_en_d072 42B_en_d073 42B_en_d074 42B_en_d075 42B_en_d076 42B_en_d077 42B_en_d078 42B_en_d079 42B_en_d080 42B_en_d081 42B_en_d082 42B_en_d083 42B_en_d084 42B_en_d085 42B_en_d086 42B_en_d087 42B_en_d088 42B_en_d089 42B_en_d090 42B_en_d091 42B_en_d092 42B_en_d093 42B_en_d094 42B_en_d095 42B_en_d096 42B_en_d097 42B_en_d098 42B_en_d099 42B_en_d100 42B_en_d101 42B_en_d102 42B_en_d103 42B_en_d104 42B_en_d105 42B_en_d106 42B_en_d107 42B_en_d108 42B_en_d109 42B_en_d110 42B_en_d111 42B_en_d112 42B_en_d113 42B_en_d114 42B_en_d115 42B_en_d116 42B_en_d117 42B_en_d118 42B_en_d119 42B_en_d120 42B_en_d121 42B_en_d122 42B_en_d123 42B_en_d124 42B_en_d125 42B_en_d126 42B_en_d127 42B_en_d128 42B_en_d129 42B_en_d130 42B_en_d131 42B_en_d132 42B_en_d133 42B_en_d134 42B_en_d135 42B_en_d136 42B_en_d137 42B_en_d138 42B_en_d139 42B_en_d140 42B_en_d141 42B_en_d142 42B_en_d143 42B_en_d144 42B_en_d145 42B_en_d146 42B_en_d147 42B_en_d148 42B_en_d149 42B_en_d150 42B_en_d151 42B_en_d152 42B_en_d153 42B_en_d154 42B_en_d155 42B_en_d156 42B_en_d157 42B_en_d158 42B_en_d159 42B_en_d160 42B_en_d161 42B_en_d162 42B_en_d163 42B_en_d164 42B_en_d165 42B_en_d166 42B_en_d167 42B_en_d168 42B_en_d169 42B_en_d170 42B_en_d171 42B_en_d172 42B_en_d173 42B_en_d174 42B_en_d175 42B_en_d176 42B_en_d177 42B_en_d178 42B_en_d179 42B_en_d180 42B_en_d181 42B_en_d182 42B_en_d183 42B_en_d184 42B_en_d185 42B_en_d186 42B_en_d187 42B_en_d188 42B_en_d189 42B_en_d190 42B_en_d191 42B_en_d192 42B_en_d193 42B_en_d194 42B_en_d195 42B_en_d196 42B_en_d197 42B_en_d198 42B_en_d199 42B_en_d200 42B_en_d201 42B_en_d202 42B_en_d203 42B_en_d204 42B_en_d205 42B_en_d206 42B_en_d207 42B_en_d208 42B_en_d209 42B_en_d210 42B_en_d211 42B_en_d212 42B_en_d213 42B_en_d214 42B_en_d215 42B_en_d216 42B_en_d217 42B_en_d218 42B_en_d219 42B_en_d220 42B_en_d221 42B_en_d222 42B_en_d223 42B_en_d224 42B_en_d225 42B_en_d226 42B_en_d227 42B_en_d228 42B_en_d229 42B_en_d230 42B_en_d231 42B_en_d232 42B_en_d233 42B_en_d234 42B_en_d235 42B_en_d236 42B_en_d237 42B_en_d238 42B_en_d239 42B_en_d240 42B_en_d241 42B_en_d242 42B_en_d243 42B_en_d244 42B_en_d245 42B_en_d246 42B_en_d247 42B_en_d248 42B_en_d249 42B_en_d250 42B_en_d251 42B_en_d252 42B_en_d253 42B_en_d254 42B_en_d255 42B_en_d256 42B_en_d257 42B_en_d258 42B_en_d259 42B_en_d260 42B_en_d261 42B_en_d262 42B_en_d263 42B_en_d264 42B_en_d265 42B_en_d266 42B_en_d267 42B_en_d268 42B_en_d269 42B_en_d270 42B_en_d271 42B_en_d272 42B_en_d273 42B_en_d274 42B_en_d275 42B_en_d276 42B_en_d277 42B_en_d278 42B_en_d279 42B_en_d280 42B_en_d281 42B_en_d282 42B_en_d283 42B_en_d284 42B_en_d285 42B_en_d286 42B_en_d287 42B_en_d288 42B_en_d289 42B_en_d290 42B_en_d291 42B_en_d292 42B_en_d293 42B_en_d294 42B_en_d295 42B_en_d296 42B_en_d297 42B_en_d298 42B_en_d299 42B_en_d300 rms f0 wordrate freq bottomup"
+echo "REGS=$REGS"
+export SEQUENTIAL=TRUE
+#unset SEQUENTIAL  # comment to run in subjects in parallel (fast but memory intensive)
+
+
+export LINGUA=en
+echo "LINGUA=$LINGUA"
+
+export SUBJECTS_FMRI_DATA="${ROOT_DIR}/fmri-data/${LINGUA}"
+echo "SUBJECTS_FMRI_DATA=$SUBJECTS_FMRI_DATA"
+
+

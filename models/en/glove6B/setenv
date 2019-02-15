@@ -1,0 +1,22 @@
+#! This must be sourced from 
+# Time-stamp: <2018-04-06 15:20:57 cp983411>
+
+#export ROOT_DIR=/neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/
+echo "ROOT_DIR=$ROOT_DIR"
+
+export MODEL="$(basename $1)"
+export MODEL_DIR="$PWD/$1"
+echo "MODEL_DIR=$MODEL_DIR"
+export REGS="glove6B_d001 glove6B_d002 glove6B_d003 glove6B_d004 glove6B_d005 glove6B_d006 glove6B_d007 glove6B_d008 glove6B_d009 glove6B_d010 glove6B_d011 glove6B_d012 glove6B_d013 glove6B_d014 glove6B_d015 glove6B_d016 glove6B_d017 glove6B_d018 glove6B_d019 glove6B_d020 glove6B_d021 glove6B_d022 glove6B_d023 glove6B_d024 glove6B_d025 glove6B_d026 glove6B_d027 glove6B_d028 glove6B_d029 glove6B_d030 glove6B_d031 glove6B_d032 glove6B_d033 glove6B_d034 glove6B_d035 glove6B_d036 glove6B_d037 glove6B_d038 glove6B_d039 glove6B_d040 glove6B_d041 glove6B_d042 glove6B_d043 glove6B_d044 glove6B_d045 glove6B_d046 glove6B_d047 glove6B_d048 glove6B_d049 glove6B_d050 glove6B_d051 glove6B_d052 glove6B_d053 glove6B_d054 glove6B_d055 glove6B_d056 glove6B_d057 glove6B_d058 glove6B_d059 glove6B_d060 glove6B_d061 glove6B_d062 glove6B_d063 glove6B_d064 glove6B_d065 glove6B_d066 glove6B_d067 glove6B_d068 glove6B_d069 glove6B_d070 glove6B_d071 glove6B_d072 glove6B_d073 glove6B_d074 glove6B_d075 glove6B_d076 glove6B_d077 glove6B_d078 glove6B_d079 glove6B_d080 glove6B_d081 glove6B_d082 glove6B_d083 glove6B_d084 glove6B_d085 glove6B_d086 glove6B_d087 glove6B_d088 glove6B_d089 glove6B_d090 glove6B_d091 glove6B_d092 glove6B_d093 glove6B_d094 glove6B_d095 glove6B_d096 glove6B_d097 glove6B_d098 glove6B_d099 glove6B_d100 glove6B_d101 glove6B_d102 glove6B_d103 glove6B_d104 glove6B_d105 glove6B_d106 glove6B_d107 glove6B_d108 glove6B_d109 glove6B_d110 glove6B_d111 glove6B_d112 glove6B_d113 glove6B_d114 glove6B_d115 glove6B_d116 glove6B_d117 glove6B_d118 glove6B_d119 glove6B_d120 glove6B_d121 glove6B_d122 glove6B_d123 glove6B_d124 glove6B_d125 glove6B_d126 glove6B_d127 glove6B_d128 glove6B_d129 glove6B_d130 glove6B_d131 glove6B_d132 glove6B_d133 glove6B_d134 glove6B_d135 glove6B_d136 glove6B_d137 glove6B_d138 glove6B_d139 glove6B_d140 glove6B_d141 glove6B_d142 glove6B_d143 glove6B_d144 glove6B_d145 glove6B_d146 glove6B_d147 glove6B_d148 glove6B_d149 glove6B_d150 glove6B_d151 glove6B_d152 glove6B_d153 glove6B_d154 glove6B_d155 glove6B_d156 glove6B_d157 glove6B_d158 glove6B_d159 glove6B_d160 glove6B_d161 glove6B_d162 glove6B_d163 glove6B_d164 glove6B_d165 glove6B_d166 glove6B_d167 glove6B_d168 glove6B_d169 glove6B_d170 glove6B_d171 glove6B_d172 glove6B_d173 glove6B_d174 glove6B_d175 glove6B_d176 glove6B_d177 glove6B_d178 glove6B_d179 glove6B_d180 glove6B_d181 glove6B_d182 glove6B_d183 glove6B_d184 glove6B_d185 glove6B_d186 glove6B_d187 glove6B_d188 glove6B_d189 glove6B_d190 glove6B_d191 glove6B_d192 glove6B_d193 glove6B_d194 glove6B_d195 glove6B_d196 glove6B_d197 glove6B_d198 glove6B_d199 glove6B_d200 glove6B_d201 glove6B_d202 glove6B_d203 glove6B_d204 glove6B_d205 glove6B_d206 glove6B_d207 glove6B_d208 glove6B_d209 glove6B_d210 glove6B_d211 glove6B_d212 glove6B_d213 glove6B_d214 glove6B_d215 glove6B_d216 glove6B_d217 glove6B_d218 glove6B_d219 glove6B_d220 glove6B_d221 glove6B_d222 glove6B_d223 glove6B_d224 glove6B_d225 glove6B_d226 glove6B_d227 glove6B_d228 glove6B_d229 glove6B_d230 glove6B_d231 glove6B_d232 glove6B_d233 glove6B_d234 glove6B_d235 glove6B_d236 glove6B_d237 glove6B_d238 glove6B_d239 glove6B_d240 glove6B_d241 glove6B_d242 glove6B_d243 glove6B_d244 glove6B_d245 glove6B_d246 glove6B_d247 glove6B_d248 glove6B_d249 glove6B_d250 glove6B_d251 glove6B_d252 glove6B_d253 glove6B_d254 glove6B_d255 glove6B_d256 glove6B_d257 glove6B_d258 glove6B_d259 glove6B_d260 glove6B_d261 glove6B_d262 glove6B_d263 glove6B_d264 glove6B_d265 glove6B_d266 glove6B_d267 glove6B_d268 glove6B_d269 glove6B_d270 glove6B_d271 glove6B_d272 glove6B_d273 glove6B_d274 glove6B_d275 glove6B_d276 glove6B_d277 glove6B_d278 glove6B_d279 glove6B_d280 glove6B_d281 glove6B_d282 glove6B_d283 glove6B_d284 glove6B_d285 glove6B_d286 glove6B_d287 glove6B_d288 glove6B_d289 glove6B_d290 glove6B_d291 glove6B_d292 glove6B_d293 glove6B_d294 glove6B_d295 glove6B_d296 glove6B_d297 glove6B_d298 glove6B_d299 glove6B_d300 rms f0 wordrate freq bottomup"
+echo "REGS=$REGS"
+export SEQUENTIAL=TRUE
+unset SEQUENTIAL  # comment to run in subjects in parallel (fast but memory intensive)
+
+
+export LINGUA=en
+echo "LINGUA=$LINGUA"
+
+export SUBJECTS_FMRI_DATA="${ROOT_DIR}/fmri-data/${LINGUA}"
+echo "SUBJECTS_FMRI_DATA=$SUBJECTS_FMRI_DATA"
+
+

@@ -1,0 +1,25 @@
+# This must be sourced from the python-script directory,
+# with the relative path of the model as argument
+# 
+# Time-stamp: <2018-08-10 09:46:15 cp983411>
+
+#export ROOT_DIR=/neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/
+echo "ROOT_DIR=$ROOT_DIR"
+
+export LINGUA=en
+echo "LINGUA=$LINGUA"
+
+export MODEL="$(basename $1)"
+export MODEL_DIR="$PWD/$1"
+echo "MODEL_DIR=$MODEL_DIR"
+
+export REGS="rms"
+echo "REGS=$REGS"
+
+export SEQUENTIAL=TRUE
+unset SEQUENTIAL  # comment to run in subjects in parallel (fast but memory intensive)
+
+export SUBJECTS_FMRI_DATA="${ROOT_DIR}/fmri-data/${LINGUA}"
+echo "SUBJECTS_FMRI_DATA=$SUBJECTS_FMRI_DATA"
+
+
