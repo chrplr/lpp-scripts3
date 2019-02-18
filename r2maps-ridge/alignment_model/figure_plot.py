@@ -12,6 +12,7 @@ args = parser.parse_args()
 
 
 plt.style.use('fivethirtyeight')
+
 subject = 57
 # Retrieve data
 with open('shuffle/all_shuffle_{}_{}.pkl'.format('basic_features', subject), 'rb') as a:
@@ -84,6 +85,7 @@ for subject in subjects:
 	#plt.hist(r2_test_basic_features, bins=100, alpha=0.5, label='basic_features')
 	#plt.hist(r2_test_basic_WE_300, bins=100, alpha=0.5, label='basic_WE_300')
 	#plt.hist(r2_test_basic_LSTM, bins=100, alpha=0.5, label='basic_LSTM')
+
 	plt.hist([r2_test_basic_features, r2_test_basic_WE_300, r2_test_basic_LSTM], bins=30, label=['BF', 'BFWE', 'BFLSTM'])
 	plt.title('Repartition des coefficients de détermination')
 	plt.legend(loc='upper right')

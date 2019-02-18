@@ -38,13 +38,14 @@ parser.add_argument('--n_components', '-c', type=int, default=51,
 parser.add_argument('--features_out', '-fo', type=list, nargs='+',
 					help='Features in the model whiwh do not need to go througn a PCA')
 parser.add_argument('--alphas', '-a', type=list, nargs=3, default=[0, 6, 20],
-					help='Generate custom alphas for nested_cv. Alpha order min, alpha order max, number of alphas.')
+					help='min power of ten, max power of ten, number of alphas. Example : 0, 6, 20 means 20 alpha values logspaced between 10^0 and 10^6')
 parser.add_argument('--default_alpha', '-da', type=int, default=15,
 					help='Set default alpha value for non-nested computations')
 parser.add_argument('--shuffle', type=int, default=None,
 					help='Generate p-value mask for a given experiment')
 parser.add_argument('--p_value', '-pv', default=None,
 					help='Path to all matrices shuffled')
+
 
 args = parser.parse_args()
 
@@ -104,6 +105,7 @@ r2_tests[r2_tests < 0], r2_tests[r2_tests > 0.99] = 0, 0
 if args.shuffle == None:
 	with open('save_r2test/{}_{}.pkl'.format(args.file, args.subject), 'wb') as f:
 		pickle.dump(r2_tests, f)
+
 """
 #Load all shuffled matrices
 if args.p_value != None:
