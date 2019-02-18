@@ -1,0 +1,13 @@
+#! /bin/sh
+
+if [ ! -d "$1" ]; then
+    echo Usage: $0 subdirectory
+    exit 1
+fi
+
+for SUBDIR in "$@" 
+do
+    if [ -d "${SUBDIR}" ]; then
+	rclone --checksum sync "${SUBDIR}" "hubic:default/protocols/Biling_decoding_Lin_Fabre_Pallier_2015/${SUBDIR}" 
+    fi
+done

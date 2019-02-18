@@ -21,24 +21,23 @@ parser.add_argument('regressors',
                     nargs='+',
                     action="append",
                     default=[])
+parser.add_argument('--nscans', nargs='+', action="append", default=[])
+parser.add_argument('--blocks', nargs='+', action="append", default=[])
+parser.add_argument('--lingua', type=str)
+
+assert len(args.nscans) == len(args.blocks), 'number of scans is not equal to number of blocks'
 
 args = parser.parse_args()
 regressors = args.regressors[0]
 
-if os.getenv('LINGUA') == 'en':
+if args.lingua == 'en' and not args.nscans:
     nscans = [282, 298, 340, 303, 265, 343, 325, 292, 368]  # numbers of scans in each session
-elif os.getenv('LINGUA') == 'fr':
+elif args.lingua == 'fr' and not args.nscans:
     nscans = [309, 326, 354, 315, 293, 378, 332, 294, 336]  # numbers of scans in each session
-else:
-    print('LINGUA not set! ')
 
 parameters = [('%d_%s.csv' % (1 + session, reg), ns)
               for reg in regressors for (session, ns) in enumerate(nscans)]
 
 Parallel(n_jobs=-2)(delayed(process_onefile) \
                     (op.join(args.input_dir, filen), 2.0, ns, args.overwrite, args.output_dir) for (filen, ns) in parameters)
-
-
-
-
 
