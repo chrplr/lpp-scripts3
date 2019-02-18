@@ -1,0 +1,19 @@
+
+{
+    "experiment": "lm",
+    "name": "{model}-{data}-{nhid}-{nlayers}-{dropout}-{optim}-{lr}-tied.{tied}-{emsize}",
+    "parameters": {
+        "cuda": [True],
+        "epochs": [20],
+        "save": ["/checkpoint/germank/neurospin/experiments/lm/{name}/model.pt"],
+        "data": ["corpora/frwac_random_100M_subset"],
+        "nlayers": [1],
+        "dropout": [0,0.25,0.5],
+        "nhid": [1000],
+        "emsize": [300],
+        "tied": [False],
+        "optim": ["SGD"],
+        "lr": [1e-1,1,10],
+        "model": ["GRU", "LSTM"],
+        "vocab": ["corpora/frwac_random_100M_subset/reduced-vocab.txt"]
+    }

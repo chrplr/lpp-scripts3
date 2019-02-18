@@ -12,17 +12,17 @@ args = parser.parse_args()
 
 
 plt.style.use('fivethirtyeight')
-
+subject = 57
 # Retrieve data
-with open('shuffle/all_shuffle_{}.pkl'.format('basic_features'), 'rb') as a:
+with open('shuffle/all_shuffle_{}_{}.pkl'.format('basic_features', subject), 'rb') as a:
 	random_r2tests_basic_features = pickle.load(a)
 	random_r2tests_basic_features = np.vstack(random_r2tests_basic_features)
 	random_r2tests_basic_features = np.amax(random_r2tests_basic_features, axis=1)
-with open('shuffle/all_shuffle_{}.pkl'.format('basic_WE_300'), 'rb') as b:
+with open('shuffle/all_shuffle_{}_{}.pkl'.format('basic_WE_300', subject), 'rb') as b:
 	random_r2tests_basic_WE_300 = pickle.load(b)
 	random_r2tests_basic_WE_300 = np.vstack(random_r2tests_basic_WE_300)
 	random_r2tests_basic_WE_300 = np.amax(random_r2tests_basic_WE_300, axis=1)
-with open('shuffle/all_shuffle_{}.pkl'.format('basic_LSTM'), 'rb') as c:
+with open('shuffle/all_shuffle_{}_{}.pkl'.format('basic_lstm', subject), 'rb') as c:
 	random_r2tests_basic_LSTM = pickle.load(c)
 	random_r2tests_basic_LSTM = np.vstack(random_r2tests_basic_LSTM)
 	random_r2tests_basic_LSTM = np.amax(random_r2tests_basic_LSTM, axis=1)
@@ -84,9 +84,10 @@ for subject in subjects:
 	#plt.hist(r2_test_basic_features, bins=100, alpha=0.5, label='basic_features')
 	#plt.hist(r2_test_basic_WE_300, bins=100, alpha=0.5, label='basic_WE_300')
 	#plt.hist(r2_test_basic_LSTM, bins=100, alpha=0.5, label='basic_LSTM')
-	plt.hist([r2_test_basic_features, r2_test_basic_WE_300, r2_test_basic_LSTM], bins=100, label=['basic_features', 'basic_WE_300', 'basic_LSTM'])
-		
+	plt.hist([r2_test_basic_features, r2_test_basic_WE_300, r2_test_basic_LSTM], bins=30, label=['BF', 'BFWE', 'BFLSTM'])
+	plt.title('Repartition des coefficients de détermination')
 	plt.legend(loc='upper right')
+	plt.tight_layout()
 	plt.savefig('/neurospin/unicog/protocols/IRMf/LePetitPrince_Pallier_2018/MRI/lpp-scripts3/outputs/r2maps-ridge/figures/histograms/Sub_{}.png'.format(subject))
 	plt.close()
 

@@ -76,7 +76,6 @@ r2_tests, r2_trains = [], []
 for block, current_block in tqdm(enumerate(data), unit='block', total=len(data)): 
 	# Split, train and evaluate the block
 	predictors, data, X_test, y_test, groups = dt.split_train_test_data(current_block, block)
-	if args.shuffle != None: np.random.shuffle(data)
 	model, alpha, r2_train_average, r2_val_average, r2_train_cv = train.train_model_with_nested_cv(predictors, data, args.subject, groups, args.nested, args.alphas, args.default_alpha)
 	r2_test = train.evaluate_model(X_test, y_test, model)
 	
@@ -105,7 +104,7 @@ r2_tests[r2_tests < 0], r2_tests[r2_tests > 0.99] = 0, 0
 if args.shuffle == None:
 	with open('save_r2test/{}_{}.pkl'.format(args.file, args.subject), 'wb') as f:
 		pickle.dump(r2_tests, f)
-
+"""
 #Load all shuffled matrices
 if args.p_value != None:
 	with open('shuffle/all_shuffle_{}.pkl'.format(args.file), 'rb') as f:
@@ -117,4 +116,4 @@ if args.p_value != None:
 
 # Plot R_squared errors with glassbrain
 plot.glass_brain(r2_tests, args.subject, args.ROI, name_ROI, args.file)
-
+"""
