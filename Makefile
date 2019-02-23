@@ -1,7 +1,7 @@
 
 #
 # Note: This Makefile is not clever, i.e. it  does not know about dependencies
-# Time-stamp: <2018-04-08 14:43:15 cp983411>
+# Time-stamp: <2019-02-19 09:31:05 christophe@pallier.org>
 
 SHELL := /bin/bash
 
@@ -25,7 +25,7 @@ export ROI_RESULTS ?= outputs/results-group/$(LINGUA)/$(MODEL)-roi
 
 regressors:
 	mkdir -p $(REGS_DIR)
-	python generate-regressors.py --no-overwrite --input-dir $(ONSETS_DIR) --output-dir $(REGS_DIR) $(REGS)
+	python generate-regressors.py --no-overwrite --lingua $(LINGUA) --input-dir $(ONSETS_DIR) --output-dir $(REGS_DIR) $(REGS)
 
 design-matrices:
 	mkdir -p $(DESIGN_MATRICES_DIR); \
