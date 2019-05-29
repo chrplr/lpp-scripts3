@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2018-04-08 14:01:20 cp983411>
+# Time-stamp: <2019-05-29 19:09:55 christophe@pallier.org>
 
 """ report various stats for design matrix """
 import sys
@@ -17,7 +17,7 @@ for f in sys.argv[1:]:  # filenames are read on the command line
     print('\n\n# ' + f)
     dtxmat = pd.read_csv(f)
     dtxmat['constant'] = pd.Series(np.ones(dtxmat.shape[0]))
-    m = dtxmat.as_matrix()
+    m = dtxmat.values
     print('\n## Means and SD')
     for c in dtxmat:
         print("%-15s" % c, round(dtxmat[c].mean(), 3), round(dtxmat[c].std(), 3))

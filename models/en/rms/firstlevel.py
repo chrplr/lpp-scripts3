@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2018-04-08 10:16:53 cp983411>
+# Time-stamp: <2019-05-29 19:26:52 christophe@pallier.org>
 
 import sys
 import getopt
@@ -38,6 +38,7 @@ def process_subject(inputpath, subjid, dtx_mat, outputpath):
         imgs = sorted(glob.glob(op.join(inputpath, subjid, "func", "res*_medn_afw.nii")))
         if len(imgs) != 9:
             print("WARNING: %s does not have 9 sessions. We skip it." % subjid)
+            print(op.join(inputpath, subjid, "func", "res*_medn_afw.nii"))
             return
         
         fmri_glm = FirstLevelModel(

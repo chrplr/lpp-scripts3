@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-#! Time-stamp: <2019-02-19 14:03:58 christophe@pallier.org>
+#! Time-stamp: <2019-05-29 19:08:05 christophe@pallier.org>
 
 """ take a list of predictor names on the command line and compute the hrf convolved regressors from the corresponding onset files [1-0]_name.csv """
 
@@ -38,7 +38,7 @@ else:
     nscans = args.nscans[0]
 
 if not args.blocks:
-    blocks = range(1, len(nscancs) + 1)
+    blocks = range(1, len(nscans) + 1)
 else:
     blocks = args.blocks[0]
 
